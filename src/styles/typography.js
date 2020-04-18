@@ -2,18 +2,23 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 
 export const H1 = styled.h1`
-  font-size: 48px;
-  color: #353535;
-  margin: 0 0 20px 0;
-  @media screen and (min-width: 768px) {
-    h1 {
-      font-size: 62px;
-    }
-  }
+  font-size: 40px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.95px;
+  color: #ffffff;
 `;
 
-export const Anchor = styled(Link)`
-  color: #353535;
+export const H2 = styled.h2`
+  font-size: 21px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: #ffffff;
 `;
 
 export const GlobalContainer = styled.div`
@@ -21,19 +26,39 @@ export const GlobalContainer = styled.div`
   height: 100vh;
   font-family: "Asap", sans-serif;
   background-color: #ffffff;
-  overflow: hidden;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  overflow-x: hidden;
 `;
 
-export const Icon = styled.a`
-  margin: 0 20px;
-  display: inline-flex;
-`;
-
-export const Svg = styled.svg`
-  width: 40px;
+export const StyledLink = styled(Link)`
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.29px;
+  border-radius: 6px;
+  text-transform: uppercase;
   height: 40px;
-`;
+  line-height: 40px;
+  padding: 0 17px;
+  cursor: pointer;
+  text-decoration: none;
 
-export const Section = styled.section`
-  line-height: 24px;
+  ${(props) =>
+    props.type === "primary" &&
+    `
+  background-color: #616161;
+  color: #ffffff;
+  `}
+
+  ${(props) =>
+    props.type === "secondary" &&
+    `
+  background-color: #616161;
+  color: #ffffff;
+  `}
 `;
