@@ -5,6 +5,7 @@ import SEO from "../components/seo";
 import { Header, HeaderImage } from "../components/header";
 import MainLayout from "../components/main-layout/main-layout";
 import History from "../components/history";
+import OurProducts from "../components/our-products";
 import { H1, H2, StyledLink } from "../styles/typography";
 
 const Title = styled(H1)`
@@ -50,6 +51,8 @@ const IndexPage = () => {
           <History />
         </Content>
       </MainLayout>
+
+      <OurProducts />
     </Layout>
   );
 };
