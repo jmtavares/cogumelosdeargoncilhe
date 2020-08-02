@@ -6,7 +6,7 @@ const PlaceholderImage = styled.div`
   margin-right: 44px;
   display: block;
   z-index: 1;
-  margin: 1em;
+  margin: 20px;  
   width: 40px;
   ::before,
   ::after,

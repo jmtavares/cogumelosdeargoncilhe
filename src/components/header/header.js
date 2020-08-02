@@ -3,28 +3,52 @@ import styled from "@emotion/styled";
 import MenuIcon from "./menu-icon";
 import Menu from "../menu";
 
-const HeaderContainer = styled.div`
+const HeadingContainer = styled.div`
   padding-top: 72px;
   display: flex;
   align-items: center;
 `;
 
-const Title = styled.h1`
+const Heading = styled.h1`
   color: #ffffff;
   font-size: 43px;
   letter-spacing: 0.34px;
   margin: 0;
 `;
 
-const Header = () => {
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 84px;
+`;
+
+const Title = styled.h3`
+  margin: 112px 0 0 0;
+  font-size: 21px;
+  max-width: 460px;
+`;
+const Subtitle = styled.h2`
+  margin: 10px 0 20px 0;
+  font-size: 40px;
+  max-width: 460px;
+`;
+
+const Header = ({ title, subtitle }) => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <HeaderContainer>
-      <MenuIcon onClick={() => setVisible(!visible)} closed={visible} />
-      <Title>Cogumelos de Argoncilhe</Title>
+    <>
+      <HeadingContainer>
+        <MenuIcon onClick={() => setVisible(!visible)} closed={visible} />
+        <Heading>Cogumelos de Argoncilhe</Heading>
+      </HeadingContainer>
       {visible && <Menu />}
-    </HeaderContainer>
+
+      <Content>
+        {title && <Title>{title}</Title>}
+        {subtitle && <Subtitle>{subtitle}</Subtitle>}
+      </Content>
+    </>
   );
 };
 
