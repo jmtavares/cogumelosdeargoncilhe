@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import { Header, HeaderImage } from "../components/header";
-import MainLayout from "../components/main-layout/main-layout";
+import MainLayout from "../components/main-layout";
 import History from "../components/history";
 import OurProducts from "../components/our-products";
 import { H1, H2, StyledLink } from "../styles/typography";

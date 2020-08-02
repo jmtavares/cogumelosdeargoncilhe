@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
-import Menu from "./menu";
+import MenuIcon from "./menu-icon";
+import Menu from "../menu";
 
 const HeaderContainer = styled.div`
   padding-top: 72px;
   display: flex;
   align-items: center;
-`;
-
-const MenuIcon = styled(Menu)`
-  margin-right: 44px;
 `;
 
 const Title = styled.h1`
@@ -19,11 +16,16 @@ const Title = styled.h1`
   margin: 0;
 `;
 
-const Header = () => (
-  <HeaderContainer>
-    <MenuIcon onClick={() => {}} />
-    <Title>Cogumelos de Argoncilhe</Title>
-  </HeaderContainer>
-);
+const Header = () => {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <HeaderContainer>
+      <MenuIcon onClick={() => setVisible(!visible)} closed={visible} />
+      <Title>Cogumelos de Argoncilhe</Title>
+      {visible && <Menu />}
+    </HeaderContainer>
+  );
+};
 
 export default Header;
