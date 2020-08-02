@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 import MenuIcon from "./menu-icon";
 import Menu from "../menu";
 
@@ -33,6 +34,10 @@ const Subtitle = styled.h2`
   max-width: 460px;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 const Header = ({ title, subtitle }) => {
   const [visible, setVisible] = useState(false);
 
@@ -40,7 +45,9 @@ const Header = ({ title, subtitle }) => {
     <>
       <HeadingContainer>
         <MenuIcon onClick={() => setVisible(!visible)} closed={visible} />
-        <Heading>Cogumelos de Argoncilhe</Heading>
+        <StyledLink to="/">
+          <Heading>Cogumelos de Argoncilhe</Heading>
+        </StyledLink>
       </HeadingContainer>
       {visible && <Menu />}
 
