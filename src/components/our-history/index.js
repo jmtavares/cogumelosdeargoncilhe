@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { H1, StyledLink } from "../../styles/typography";
 
-const HistoryContainer = styled.div`
+const OurHistoryContainer = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   grid-column-gap: 10px;
@@ -25,8 +25,8 @@ const KnowMoreButton = styled(StyledLink)`
   margin-top: 25px;
 `;
 
-const History = () => (
-  <HistoryContainer>
+const OurHistory = () => (
+  <OurHistoryContainer>
     <div>
       <Title>A nossa história...</Title>
       <Description>
@@ -41,7 +41,7 @@ const History = () => (
     <div>
       <Img src="https://cdn.olhares.pt/client/files/foto/big/836/8364625.jpg" />
     </div>
-  </HistoryContainer>
+  </OurHistoryContainer>
 );
 
-export default History;
+export default OurHistory;

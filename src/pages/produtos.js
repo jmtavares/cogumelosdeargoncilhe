@@ -3,12 +3,14 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import MainLayout from "../components/main-layout";
 import { Header, HeaderImage } from "../components/header";
+import MushroomList from "../components/mushroom-list";
+import MushroomsDescription from "../components/mushrooms-description";
 
 const ProdutosPage = () => (
   <Layout>
     <SEO title="Produtos" />
 
-    <HeaderImage image="https://www.incredibleforest.net/sites/default/files/istock_000004455406medium-1_1.jpg">
+    <HeaderImage image="https://i.pinimg.com/originals/71/f5/de/71f5decfda825e65be2efdf1a84bf969.jpg">
       <MainLayout>
         <Header
           title="Os nossos produtos…"
@@ -16,6 +18,8 @@ const ProdutosPage = () => (
         />
       </MainLayout>
     </HeaderImage>
+    <MushroomList />
+    <MushroomsDescription />
   </Layout>
 );
 

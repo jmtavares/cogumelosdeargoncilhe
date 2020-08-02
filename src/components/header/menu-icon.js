@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const PlaceholderImage = styled.div`
+  
   cursor: pointer;
   margin-right: 44px;
   display: block;

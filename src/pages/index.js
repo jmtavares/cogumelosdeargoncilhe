@@ -4,7 +4,7 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import { Header, HeaderImage } from "../components/header";
 import MainLayout from "../components/main-layout";
-import History from "../components/history";
+import OurHistory from "../components/our-history";
 import OurProducts from "../components/our-products";
 import { H1, H2, StyledLink } from "../styles/typography";
 
@@ -48,7 +48,7 @@ const IndexPage = () => {
 
       <MainLayout>
         <Content>
-          <History />
+          <OurHistory />
         </Content>
       </MainLayout>
 
