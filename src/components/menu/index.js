@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { StyledLink } from "../../styles/typography";
 import MainLayout from "../main-layout";
+import Footer from "./footer";
 
 const MenuContainer = styled.div`
   position: absolute;
@@ -23,7 +24,7 @@ const PageLink = styled(StyledLink)`
   color: #fff;
   font-size: 40px;
   text-transform: none;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 `;
 
 const Menu = () => (
@@ -46,6 +47,7 @@ const Menu = () => (
           <PageLink to="/contactos">Contactos</PageLink>
         </div>
       </Links>
+      <Footer />
     </MainLayout>
   </MenuContainer>
 );
