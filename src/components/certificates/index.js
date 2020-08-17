@@ -5,9 +5,11 @@ import image from "../../images/mushroom1.jpg";
 const CertificatesContainer = styled.div`
   padding: 40px 0;
   color: #616161;
-  display: flex;
-  align-items: center;
   text-align: left;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 10px;
+  padding: 75px 0;
 `;
 
 const Title = styled.h2`
@@ -21,8 +23,9 @@ const Description = styled.p`
 `;
 
 const Column = styled.div`
-  width: 50%;
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Image = styled.img`

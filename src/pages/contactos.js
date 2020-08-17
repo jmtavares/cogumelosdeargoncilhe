@@ -3,12 +3,13 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import MainLayout from "../components/main-layout";
 import { Header, HeaderImage } from "../components/header";
+import image from "../images/fundo-contactos.jpg";
 
 const ContactosPage = () => (
   <Layout>
     <SEO title="Contactos" />
 
-    <HeaderImage image="https://images.pexels.com/photos/850/wood-forest-autumn-mushrooms.jpg">
+    <HeaderImage image={image}>
       <MainLayout>
         <Header title="Prontos a ajudar…" subtitle="Contactos" />
       </MainLayout>

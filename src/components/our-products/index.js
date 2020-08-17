@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { Link } from "gatsby";
 import { H1 } from "../../styles/typography";
 import imgArrow from "../../images/down-arrow.svg";
 
-const OurProductsContainer = styled.div`
+const OurProductsContainer = styled(Link)`
   min-height: 300px;
   width: 100%;
   display: flex;
@@ -12,6 +13,12 @@ const OurProductsContainer = styled.div`
   align-items: center;
   background-color: #616161;
   color: #fff;
+  transition: background-color .5s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #000;
+  }
 `;
 
 const Title = styled(H1)`
@@ -31,7 +38,7 @@ const Arrow = styled.div`
 const ArrowImage = styled.img``;
 
 const OurProducts = () => (
-  <OurProductsContainer>
+  <OurProductsContainer to="/produtos">
     <Title>Os nossos produtos</Title>
     <Arrow>
       <ArrowImage src={imgArrow} alt="Ver os nossos productos" />
