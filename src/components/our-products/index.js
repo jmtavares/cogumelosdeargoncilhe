@@ -32,7 +32,7 @@ const ArrowImage = styled.img``;
 
 const OurProducts = () => (
   <OurProductsContainer>
-    <Title>Os nossos productos</Title>
+    <Title>Os nossos produtos</Title>
     <Arrow>
       <ArrowImage src={imgArrow} alt="Ver os nossos productos" />
     </Arrow>

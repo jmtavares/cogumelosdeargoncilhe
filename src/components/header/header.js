@@ -8,6 +8,7 @@ const HeadingContainer = styled.div`
   padding-top: 72px;
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
 const Heading = styled.h1`
@@ -20,11 +21,11 @@ const Heading = styled.h1`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 84px;
+  padding: 40px 0;
 `;
 
 const Title = styled.h3`
-  margin: 112px 0 0 0;
+  margin: 72px 0 0 0;
   font-size: 21px;
   max-width: 460px;
 `;
@@ -51,10 +52,12 @@ const Header = ({ title, subtitle }) => {
       </HeadingContainer>
       {visible && <Menu />}
 
-      <Content>
-        {title && <Title>{title}</Title>}
-        {subtitle && <Subtitle>{subtitle}</Subtitle>}
-      </Content>
+      {(title || subtitle) && (
+        <Content>
+          {title && <Title>{title}</Title>}
+          {subtitle && <Subtitle>{subtitle}</Subtitle>}
+        </Content>
+      )}
     </>
   );
 };

@@ -25,26 +25,43 @@ const PageLink = styled(StyledLink)`
   font-size: 40px;
   text-transform: none;
   margin-bottom: 30px;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #000;
+  }
 `;
+
+const activeStyle = { color: "black" };
 
 const Menu = () => (
   <MenuContainer>
     <MainLayout>
       <Links>
         <div>
-          <PageLink to="/">Home</PageLink>
+          <PageLink to="/" activeStyle={activeStyle}>
+            Home
+          </PageLink>
         </div>
         <div>
-          <PageLink to="/historia">História</PageLink>
+          <PageLink to="/historia" activeStyle={activeStyle}>
+            História
+          </PageLink>
         </div>
         <div>
-          <PageLink to="/produtos">Produtos</PageLink>
+          <PageLink to="/produtos" activeStyle={activeStyle}>
+            Produtos
+          </PageLink>
         </div>
         <div>
-          <PageLink to="/receitas">Receitas</PageLink>
+          <PageLink to="/receitas" activeStyle={activeStyle}>
+            Receitas
+          </PageLink>
         </div>
         <div>
-          <PageLink to="/contactos">Contactos</PageLink>
+          <PageLink to="/contactos" activeStyle={activeStyle}>
+            Contactos
+          </PageLink>
         </div>
       </Links>
       <Footer />

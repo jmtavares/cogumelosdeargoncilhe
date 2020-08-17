@@ -1,0 +1,50 @@
+import React from "react";
+import styled from "@emotion/styled";
+import image from "../../images/mushroom1.jpg";
+
+const CertificatesContainer = styled.div`
+  padding: 40px 0;
+  color: #616161;
+  display: flex;
+  align-items: center;
+  text-align: left;
+`;
+
+const Title = styled.h2`
+  margin: 0;
+  font-size: 40px;
+`;
+
+const Description = styled.p`
+  font-size: 19px;
+  letter-spacing: 0.45px;
+`;
+
+const Column = styled.div`
+  width: 50%;
+  padding: 0 20px;
+`;
+
+const Image = styled.img`
+  width: 100%;
+`;
+
+const Certificates = () => {
+  return (
+    <CertificatesContainer>
+      <Column>
+        <Title>Certificados</Title>
+        <Description>
+          Cumprimos os requesitos da <strong>NATURALFA</strong>, para a
+          obtenção, preparação e comercialização dos nossos produtos em{" "}
+          <strong>Modo de Produção Biológico.</strong>
+        </Description>
+      </Column>
+      <Column>
+        <Image src={image} alt="Cogumelos" />
+      </Column>
+    </CertificatesContainer>
+  );
+};
+
+export default Certificates;
