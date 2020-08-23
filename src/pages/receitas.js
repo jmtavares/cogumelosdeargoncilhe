@@ -3,7 +3,7 @@ import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import MainLayout from "../components/main-layout";
 import { Header, HeaderImage } from "../components/header";
-import OurProducts from '../components/our-products'
+import OurProducts from "../components/our-products";
 
 const ReceitasPage = () => (
   <Layout>

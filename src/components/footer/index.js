@@ -10,13 +10,21 @@ const FooterContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 40px 0;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const Heading = styled.h1`
   color: #616161;
-  font-size: 43px;
+  font-size: 24px;
   letter-spacing: 0.34px;
-  margin: 0;
+  margin: 0 0 12px 0;
+  @media screen and (min-width: 768px) {
+    font-size: 43px;
+    margin: 0;
+  }
 `;
 
 const FollowUs = styled.div`

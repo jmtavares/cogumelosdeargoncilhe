@@ -5,7 +5,7 @@ import MainLayout from "../components/main-layout";
 import { Header, HeaderImage } from "../components/header";
 import MushroomList from "../components/mushroom-list";
 import MushroomsDescription from "../components/mushrooms-description";
-import image from '../images/fundo-produtos.jpg'
+import image from "../images/fundo-produtos.jpg";
 
 const ProdutosPage = () => (
   <Layout>

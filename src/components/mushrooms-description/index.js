@@ -7,12 +7,19 @@ import desidratadosImg from "../../images/desidratados.jpg";
 
 const MushroomsDescriptionContainer = styled.div`
   background-color: #fff;
-  padding: 80px 0 0 0;
+  padding: 20px;
+  @media screen and (min-width: 768px) {
+    padding: 80px 0 0 0;
+  }
 `;
 
 const MushroomContainer = styled.div`
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 100%;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 65% 35%;
+  }
 `;
 
 const Title = styled.h2`
@@ -30,7 +37,7 @@ const Right = styled.div`
 `;
 
 const ItemImage = styled.img`
-  width: 270px;  
+  width: 270px;
 `;
 
 const MushroomsDescription = () => (

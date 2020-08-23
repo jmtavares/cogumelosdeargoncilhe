@@ -5,15 +5,21 @@ import SEO from "../components/seo";
 import MainLayout from "../components/main-layout";
 import { Header, HeaderImage } from "../components/header";
 import Certificates from "../components/certificates";
-import OurProducts from '../components/our-products'
-import image from '../images/fundo-receitas.jpg'
+import OurProducts from "../components/our-products";
+import image from "../images/fundo-receitas.jpg";
 
 const HistoryBlock = styled.div`
   background-color: #616161;
-  padding: 40px 0;
-  font-size: 24px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
-  line-height: 32px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 40px 0;
+  }
 `;
 const CertificatesBlock = styled.div`
   background-color: #fff;

@@ -4,9 +4,13 @@ import { H1, StyledLink } from "../../styles/typography";
 
 const OurHistoryContainer = styled.div`
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-column-gap: 10px;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
   padding: 75px 0;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 50% 50%;
+  }
 `;
 
 const Title = styled(H1)`

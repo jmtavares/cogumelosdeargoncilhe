@@ -3,13 +3,17 @@ import styled from "@emotion/styled";
 import image from "../../images/mushroom1.jpg";
 
 const CertificatesContainer = styled.div`
-  padding: 40px 0;
   color: #616161;
   text-align: left;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-column-gap: 10px;
-  padding: 75px 0;
+  grid-gap: 10px;
+  grid-template-columns: 100%;
+  padding: 20px;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 50% 50%;
+    padding: 75px 0;
+  }
 `;
 
 const Title = styled.h2`

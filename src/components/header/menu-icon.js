@@ -3,10 +3,9 @@ import styled from "@emotion/styled";
 
 const PlaceholderImage = styled.div`
   cursor: pointer;
-  margin-right: 44px;
   display: block;
   z-index: 1;
-  margin: 20px;
+  margin: 12px;
   width: 40px;
   ::before,
   ::after,
@@ -18,6 +17,9 @@ const PlaceholderImage = styled.div`
     height: 3px;
     margin: 7px 0;
     transition: all 0.2s ease-in-out;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 20px;
   }
 
   @media screen and (min-width: 1400px) {

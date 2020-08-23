@@ -23,7 +23,12 @@ const OurProductsContainer = styled(Link)`
 
 const Title = styled(H1)`
   text-transform: uppercase;
-  font-size: 48px;
+  font-size: 30px;
+  text-align:center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const Arrow = styled.div`

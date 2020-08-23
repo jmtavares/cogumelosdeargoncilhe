@@ -6,9 +6,13 @@ import InstagramLogo from "../instagram-logo";
 
 const FooterContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin: 40px 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 40px 0;
+    justify-content: flex-end;
+  }
 `;
 
 const FollowUs = styled.div`

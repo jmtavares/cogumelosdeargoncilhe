@@ -7,7 +7,7 @@ import MainLayout from "../components/main-layout";
 import OurHistory from "../components/our-history";
 import OurProducts from "../components/our-products";
 import { H1, H2, StyledLink } from "../styles/typography";
-import image from '../images/fundo-home.jpg'
+import image from "../images/fundo-home.jpg";
 
 const Title = styled(H1)`
   margin: ${(props) => props.margin} 0 0 0;
@@ -20,6 +20,11 @@ const Subtitle = styled(H2)`
 const Content = styled.div`
   font-size: 21px;
   letter-spacing: 0.5px;
+  margin: 0 20px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 `;
 
 const KnowMoreButton = styled(StyledLink)`
