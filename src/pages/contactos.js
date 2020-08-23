@@ -4,6 +4,7 @@ import SEO from "../components/seo";
 import MainLayout from "../components/main-layout";
 import { Header, HeaderImage } from "../components/header";
 import WhereWeAre from "../components/where-we-are";
+import ContactUs from "../components/contact-us";
 import image from "../images/fundo-contactos.jpg";
 
 const ContactosPage = () => (
@@ -16,6 +17,7 @@ const ContactosPage = () => (
       </MainLayout>
     </HeaderImage>
     <WhereWeAre />
+    <ContactUs />
   </Layout>
 );
 

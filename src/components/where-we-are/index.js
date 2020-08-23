@@ -23,7 +23,7 @@ const LocationContainer = styled.div`
   grid-gap: 10px;
 
   @media screen and (min-width: 768px) {
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 50% 50%;
   }
 `;
 
