@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { StyledLink } from "../../styles/typography";
-import MainLayout from "../main-layout";
 import Footer from "./footer";
 
 const MenuContainer = styled.div`
@@ -21,6 +20,11 @@ const Links = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 120px;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
 `;
 
 const PageLink = styled(StyledLink)`
@@ -43,36 +47,34 @@ const activeStyle = { color: "black" };
 
 const Menu = () => (
   <MenuContainer>
-    <MainLayout>
-      <Links>
-        <div>
-          <PageLink to="/" activeStyle={activeStyle}>
-            Home
-          </PageLink>
-        </div>
-        <div>
-          <PageLink to="/historia" activeStyle={activeStyle}>
-            História
-          </PageLink>
-        </div>
-        <div>
-          <PageLink to="/produtos" activeStyle={activeStyle}>
-            Produtos
-          </PageLink>
-        </div>
-        <div>
-          <PageLink to="/receitas" activeStyle={activeStyle}>
-            Receitas
-          </PageLink>
-        </div>
-        <div>
-          <PageLink to="/contactos" activeStyle={activeStyle}>
-            Contactos
-          </PageLink>
-        </div>
-      </Links>
-      <Footer />
-    </MainLayout>
+    <Links>
+      <div>
+        <PageLink to="/" activeStyle={activeStyle}>
+          Home
+        </PageLink>
+      </div>
+      <div>
+        <PageLink to="/historia" activeStyle={activeStyle}>
+          História
+        </PageLink>
+      </div>
+      <div>
+        <PageLink to="/produtos" activeStyle={activeStyle}>
+          Produtos
+        </PageLink>
+      </div>
+      <div>
+        <PageLink to="/receitas" activeStyle={activeStyle}>
+          Receitas
+        </PageLink>
+      </div>
+      <div>
+        <PageLink to="/contactos" activeStyle={activeStyle}>
+          Contactos
+        </PageLink>
+      </div>
+    </Links>
+    <Footer />
   </MenuContainer>
 );
 

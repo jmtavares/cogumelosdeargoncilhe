@@ -6,16 +6,7 @@ import { Header, HeaderImage } from "../components/header";
 import MainLayout from "../components/main-layout";
 import OurHistory from "../components/our-history";
 import OurProducts from "../components/our-products";
-import { H1, H2, StyledLink } from "../styles/typography";
 import image from "../images/fundo-home.jpg";
-
-const Title = styled(H1)`
-  margin: ${(props) => props.margin} 0 0 0;
-`;
-
-const Subtitle = styled(H2)`
-  margin: ${(props) => props.margin} 0 0 0;
-`;
 
 const Content = styled.div`
   font-size: 21px;
@@ -27,10 +18,6 @@ const Content = styled.div`
   }
 `;
 
-const KnowMoreButton = styled(StyledLink)`
-  margin-top: 25px;
-`;
-
 const IndexPage = () => {
   return (
     <Layout>
@@ -38,16 +25,10 @@ const IndexPage = () => {
 
       <HeaderImage image={image}>
         <MainLayout size="100vh">
-          <Header />
-          <Content>
-            <Subtitle margin="112px">Novidades</Subtitle>
-            <Title margin="75px">Cogumelos Desidratados</Title>
-            <div>Desidratados ao sol, com vitamina D.</div>
-
-            <KnowMoreButton to="/produtos" type="primary">
-              Saber Mais
-            </KnowMoreButton>
-          </Content>
+          <Header
+            title="Cogumelos Desidratados"
+            subtitle="Desidratados ao sol, com vitamina D."
+          />
         </MainLayout>
       </HeaderImage>
 
