@@ -13,18 +13,25 @@ const OurProductsContainer = styled(Link)`
   align-items: center;
   background-color: #616161;
   color: #fff;
-  transition: background-color .5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
   text-decoration: none;
   cursor: pointer;
+  padding: 20px;
+  box-sizing: border-box;
+
   &:hover {
     background-color: #000;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
   }
 `;
 
 const Title = styled(H1)`
   text-transform: uppercase;
   font-size: 30px;
-  text-align:center;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 48px;

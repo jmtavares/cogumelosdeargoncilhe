@@ -6,7 +6,7 @@ const PlaceholderImage = styled.div`
   display: block;
   z-index: 2;
   margin: 12px;
-  width: 40px;
+  width: 30px;
   ::before,
   ::after,
   div {
@@ -20,6 +20,7 @@ const PlaceholderImage = styled.div`
   }
   @media screen and (min-width: 768px) {
     margin: 20px;
+    width: 40px;
   }
 
   @media screen and (min-width: 1400px) {
