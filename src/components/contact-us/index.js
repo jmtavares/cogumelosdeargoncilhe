@@ -13,7 +13,7 @@ const ContactUsContainer = styled.div`
   }
 
   @media screen and (min-width: 1400px) {
-    padding: 0;
+    padding: 0 0 80px 0;
   }
 `;
 
@@ -62,6 +62,7 @@ const StyledButton = styled.button`
   font-weight: bold;
   width: 100%;
   text-transform: upperCase;
+  font-size: 14px;
 
   @media screen and (min-width: 768px) {
     width: 120px;
@@ -116,6 +117,7 @@ const ContactUs = () => (
 
       <Form
         name="contact"
+        action="/contacto-recebido"
         method="POST"
         netlify-honeypot="bot-field"
         data-netlify="true"
