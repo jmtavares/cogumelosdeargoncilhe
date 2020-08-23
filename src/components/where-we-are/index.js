@@ -6,12 +6,17 @@ import image from "../../images/contactos.jpg";
 
 const WhereWeAreContainer = styled.div`
   background-color: #616161;
-  padding: 80px 0;
+  padding: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 80px 0;
+  }
 `;
 
 const LocationContainer = styled.div`
   display: grid;
   grid-template-columns: 100%;
+  grid-gap: 10px;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 35% 65%;
@@ -19,16 +24,23 @@ const LocationContainer = styled.div`
 `;
 
 const Title = styled(H1)`
-  font-size: 27px;
+  font-size: 22px;
   letter-spacing: 0.64px;
   margin: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 27px;
+  }
 `;
 
 const Description = styled.p`
-  font-size: 19px;
+  font-size: 15px;
   letter-spacing: 0.45px;
   margin: 0;
   font-weight: 300;
+  @media screen and (min-width: 768px) {
+    font-size: 19px;
+  }
 `;
 
 const FarmImage = styled.img`
@@ -42,9 +54,12 @@ const Separator = styled.div`
 const CustomLink = styled.a`
   color: #fff;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 15px;
   letter-spacing: 0.45px;
   font-weight: 300;
+  @media screen and (min-width: 768px) {
+    font-size: 19px;
+  }
 `;
 
 const WhereWeAre = () => (
