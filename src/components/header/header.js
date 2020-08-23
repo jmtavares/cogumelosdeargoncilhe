@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import MenuIcon from "./menu-icon";
 import Menu from "../menu";
+import LogoText from "../logo-text";
 
 const HeadingContainer = styled.div`
   display: flex;
@@ -11,16 +12,6 @@ const HeadingContainer = styled.div`
   padding-top: 16px;
   @media screen and (min-width: 768px) {
     padding-top: 60px;
-  }
-`;
-
-const Heading = styled.h1`
-  color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 0.34px;
-  margin: 0;
-  @media screen and (min-width: 768px) {
-    font-size: 43px;
   }
 `;
 
@@ -59,6 +50,7 @@ const Subtitle = styled.h2`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  display: flex;
 `;
 
 const Header = ({ title, subtitle }) => {
@@ -69,7 +61,7 @@ const Header = ({ title, subtitle }) => {
       <HeadingContainer>
         <MenuIcon onClick={() => setVisible(!visible)} closed={visible} />
         <StyledLink to="/">
-          <Heading>Cogumelos de Argoncilhe</Heading>
+          <LogoText fill="#FFFFFF" />
         </StyledLink>
       </HeadingContainer>
       {visible && <Menu />}

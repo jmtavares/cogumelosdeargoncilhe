@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import MainLayout from "../main-layout";
 import FacebookLogo from "../facebook-logo";
 import InstagramLogo from "../instagram-logo";
+import LogoText from "../logo-text";
 
 const FooterContainer = styled.div`
   display: flex;
@@ -19,17 +20,6 @@ const FooterContainer = styled.div`
 
   @media screen and (min-width: 1400px) {
     margin: 40px 0;
-  }
-`;
-
-const Heading = styled.h1`
-  color: #616161;
-  font-size: 24px;
-  letter-spacing: 0.34px;
-  margin: 0 0 12px 0;
-  @media screen and (min-width: 768px) {
-    font-size: 43px;
-    margin: 0;
   }
 `;
 
@@ -53,13 +43,23 @@ const InstagramImage = styled(InstagramLogo)`
 const Footer = () => (
   <MainLayout>
     <FooterContainer>
-      <Heading>Cogumelos de Argoncilhe</Heading>
+      <Link to="/">
+        <LogoText fill="#616161" />
+      </Link>
       <FollowUs>
         Siga-nos em:
-        <Link to="https://www.facebook.com/Cogumelos-de-Argoncilhe-1391774824183623" target="_blank" rel="noopener">
+        <Link
+          to="https://www.facebook.com/Cogumelos-de-Argoncilhe-1391774824183623"
+          target="_blank"
+          rel="noopener"
+        >
           <FacebookImage />
         </Link>
-        <Link to="https://www.instagram.com/cogumelosdeargoncilhe/" target="_blank" rel="noopener">
+        <Link
+          to="https://www.instagram.com/cogumelosdeargoncilhe/"
+          target="_blank"
+          rel="noopener"
+        >
           <InstagramImage />
         </Link>
       </FollowUs>
