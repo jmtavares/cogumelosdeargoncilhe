@@ -2,8 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import MainLayout from "../main-layout";
 import shitakeImg from "../../images/shitake.png";
-import pleurotusImg from "../../images/pleurotus.jpeg";
-import desidratadosImg from "../../images/desidratados.jpg";
+import pleurotusImg from "../../images/pleurotus.png";
+import desidratadosImg from "../../images/desidratados.png";
 
 const MushroomListContainer = styled.div`
   background-color: #616161;
@@ -38,6 +38,7 @@ const Item = styled.div`
 const ItemImage = styled.img`
   width: 200px;
   height: 200px;
+  filter: drop-shadow(10px 10px 10px #000);
 
   @media screen and (min-width: 1024px) {
     width: 270px;

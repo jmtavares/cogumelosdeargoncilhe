@@ -2,8 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import MainLayout from "../main-layout";
 import shitakeImg from "../../images/shitake.png";
-import pleurotusImg from "../../images/pleurotus.jpeg";
-import desidratadosImg from "../../images/desidratados.jpg";
+import pleurotusImg from "../../images/pleurotus.png";
+import desidratadosImg from "../../images/desidratados.png";
 
 const MushroomsDescriptionContainer = styled.div`
   background-color: #fff;
@@ -31,6 +31,7 @@ const Title = styled.h2`
   color: #616161;
   font-size: 40px;
 `;
+
 const Description = styled.p`
   color: #616161;
   font-size: 19px;
@@ -43,6 +44,7 @@ const Right = styled.div`
 
 const ItemImage = styled.img`
   width: 270px;
+  filter: drop-shadow(10px 10px 10px #000);
 `;
 
 const MushroomsDescription = () => (

@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 const PlaceholderImage = styled.div`
   cursor: pointer;
   display: block;
-  z-index: 1;
+  z-index: 2;
   margin: 12px;
   width: 40px;
   ::before,

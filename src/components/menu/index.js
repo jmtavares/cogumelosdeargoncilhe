@@ -10,6 +10,7 @@ const MenuContainer = styled.div`
   right: 0;
   bottom: 0;
   background-color: #616161;
+  z-index: 1;
 
   @media screen and (min-width: 768px) {
     padding: 200px 100px;
