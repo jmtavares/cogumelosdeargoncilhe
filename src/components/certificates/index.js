@@ -12,6 +12,10 @@ const CertificatesContainer = styled.div`
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 50% 50%;
+    padding: 75px 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
     padding: 75px 0;
   }
 `;

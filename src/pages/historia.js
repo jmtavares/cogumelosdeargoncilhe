@@ -18,6 +18,10 @@ const HistoryBlock = styled.div`
   @media screen and (min-width: 768px) {
     font-size: 24px;
     line-height: 32px;
+    padding: 40px 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
     padding: 40px 0;
   }
 `;

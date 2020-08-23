@@ -10,7 +10,7 @@ const HeadingContainer = styled.div`
   position: relative;
   padding-top: 16px;
   @media screen and (min-width: 768px) {
-    padding-top: 72px;
+    padding-top: 60px;
   }
 `;
 
@@ -29,7 +29,12 @@ const Content = styled.div`
   flex-direction: column;
   padding: 40px 0;
   margin: 0 20px;
+
   @media screen and (min-width: 768px) {
+    margin: 0 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
     margin: 0;
   }
 `;

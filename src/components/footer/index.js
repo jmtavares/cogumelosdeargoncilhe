@@ -11,8 +11,14 @@ const FooterContainer = styled.div`
   align-items: center;
   margin: 40px 0;
   flex-direction: column;
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    margin: 40px 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    margin: 40px 0;
   }
 `;
 

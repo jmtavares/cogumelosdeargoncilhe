@@ -8,8 +8,13 @@ import desidratadosImg from "../../images/desidratados.jpg";
 const MushroomsDescriptionContainer = styled.div`
   background-color: #fff;
   padding: 20px;
+
   @media screen and (min-width: 768px) {
-    padding: 80px 0 0 0;
+    padding: 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    padding: 80px 0;
   }
 `;
 

@@ -10,6 +10,10 @@ const MushroomListContainer = styled.div`
   padding: 20px;
 
   @media screen and (min-width: 768px) {
+    padding: 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
     padding: 80px 0;
   }
 `;
@@ -32,8 +36,13 @@ const Item = styled.div`
 `;
 
 const ItemImage = styled.img`
-  width: 270px;
-  height: 270px;
+  width: 200px;
+  height: 200px;
+
+  @media screen and (min-width: 1024px) {
+    width: 270px;
+    height: 270px;
+  }
 `;
 
 const ItemTitle = styled.p`

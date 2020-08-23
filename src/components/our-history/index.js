@@ -7,9 +7,17 @@ const OurHistoryContainer = styled.div`
   grid-template-columns: 100%;
   grid-gap: 10px;
   padding: 75px 0;
+  font-size: 21px;
+  letter-spacing: 0.5px;
+  margin: 0 20px;
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 50% 50%;
+    margin: 0 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    margin: 0;
   }
 `;
 

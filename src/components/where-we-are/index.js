@@ -9,6 +9,10 @@ const WhereWeAreContainer = styled.div`
   padding: 20px;
 
   @media screen and (min-width: 768px) {
+    padding: 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
     padding: 80px 0;
   }
 `;
@@ -45,6 +49,7 @@ const Description = styled.p`
 
 const FarmImage = styled.img`
   width: 100%;
+  max-width: 500px;
 `;
 
 const Separator = styled.div`
@@ -57,6 +62,11 @@ const CustomLink = styled.a`
   font-size: 15px;
   letter-spacing: 0.45px;
   font-weight: 300;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
   @media screen and (min-width: 768px) {
     font-size: 19px;
   }
