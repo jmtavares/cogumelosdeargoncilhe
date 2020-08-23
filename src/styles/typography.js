@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 export const H1 = styled.h1`
   font-size: 40px;
-  font-weight: 900;
+  font-weight: 700;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -13,7 +13,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-size: 21px;
-  font-weight: 900;
+  font-weight: 700;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -24,7 +24,7 @@ export const H2 = styled.h2`
 export const GlobalContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  font-family: "Asap", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   background-color: #ffffff;
   color: #ffffff;
   font-size: 20px;
@@ -35,7 +35,7 @@ export const GlobalContainer = styled.div`
 export const StyledLink = styled(Link)`
   display: inline-block;
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
