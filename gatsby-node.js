@@ -52,12 +52,18 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    // Use `createFilePath` to turn markdown files in our `data/faqs` directory into `/faqs/slug`
+    const relativeFilePath = createFilePath({
+      node,
+      getNode,
+      basePath: "content/receitas/",
+    });
 
+    // Creates new query'able field with name of 'slug'
     createNodeField({
       node,
-      name: `slug`,
-      value,
+      name: "slug",
+      value: `/receitas${relativeFilePath}`,
     });
   }
 };

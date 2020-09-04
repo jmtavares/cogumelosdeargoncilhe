@@ -5,10 +5,10 @@ import SEO from "../components/seo";
 import MainLayout from "../components/main-layout";
 import { Header, HeaderImage } from "../components/header";
 import OurProducts from "../components/our-products";
+import TopRecipes from "../components/top-recipes";
 
 const ReceitasPage = ({ data }) => {
   const posts = data.allMarkdownRemark;
-  console.log(posts);
 
   return (
     <Layout>
@@ -21,13 +21,7 @@ const ReceitasPage = ({ data }) => {
             subtitle="Á procura de novas receitas?"
           />
         </MainLayout>
-        {posts.edges.map(({ node }) => (
-          <div>
-            <Link to={node.fields.slug} className="link">
-              {node.frontmatter.title}
-            </Link>
-          </div>
-        ))}
+        <TopRecipes recipes={posts.edges} />
         <OurProducts />
       </HeaderImage>
     </Layout>
