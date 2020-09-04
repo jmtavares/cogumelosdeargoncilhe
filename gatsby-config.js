@@ -41,13 +41,13 @@ module.exports = {
         htmlTitle: `Cogumelos de Argoncilhe - Admin`,
       },
     },
-    { resolve: `gatsby-transformer-remark` },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/content/receitas`,
         name: "blog",
       },
-    }
+    },
+    `gatsby-transformer-remark`,
   ]
 };
