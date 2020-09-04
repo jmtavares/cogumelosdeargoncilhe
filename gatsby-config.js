@@ -33,6 +33,13 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify-cms`
-  ],
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        enableIdentityWidget: false,
+        publicPath: `admin`,
+        htmlTitle: `Cogumelos de Argoncilhe - Admin`,
+      },
+    }
+  ]
 };
