@@ -7,7 +7,9 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
-  const blogPostTemplate = require.resolve(`./src/templates/blogTemplate.js`);
+  const blogPostTemplate = require.resolve(
+    `./src/templates/receitasTemplate.js`
+  );
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -17,9 +19,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             fields {
-              slug
-            }
-            frontmatter {
               slug
             }
           }
@@ -39,11 +38,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const { node } = edge;
 
     createPage({
-      path: node.frontmatter.slug,
+      path: node.fields.slug,
       component: blogPostTemplate,
       context: {
         // additional data can be passed via context
-        slug: node.frontmatter.slug,
+        slug: node.fields.slug,
       },
     });
   });
