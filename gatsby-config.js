@@ -40,6 +40,14 @@ module.exports = {
         publicPath: `admin`,
         htmlTitle: `Cogumelos de Argoncilhe - Admin`,
       },
+    },
+    { resolve: `gatsby-transformer-remark` },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/blog`,
+        name: "blog",
+      },
     }
   ]
 };
