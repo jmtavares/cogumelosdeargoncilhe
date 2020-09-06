@@ -26,7 +26,7 @@ const TopRecipes = ({ recipes = [] }) => {
   return (
     <TopRecipesContainer>
       <MainLayout>
-        {latestRecipe && <LatestRecipe recipe={latestRecipe}></LatestRecipe>}
+        {latestRecipe && <LatestRecipe recipe={latestRecipe} />}
         <RecipesContainer>
           {recipes.map((recipe, index) => (
             <PreviewRecipe key={index} recipe={recipe} />

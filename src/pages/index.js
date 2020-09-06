@@ -6,11 +6,8 @@ import MainLayout from "../components/main-layout";
 import OurHistory from "../components/our-history";
 import OurProducts from "../components/our-products";
 import image from "../images/fundo-home.jpg";
-import CMS from 'netlify-cms-app';
-import { pt } from 'netlify-cms-locales';
 
 const IndexPage = () => {
-  CMS.registerLocale('pt', pt);
   return (
     <Layout>
       <SEO title="Cogumelos de Argoncilhe" keywords={[]} />

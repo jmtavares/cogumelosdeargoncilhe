@@ -36,6 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
+        modulePath: `./src/components/cms/index.js`,
         enableIdentityWidget: false,
         publicPath: `admin`,
         htmlTitle: `Cogumelos de Argoncilhe - Admin`,
