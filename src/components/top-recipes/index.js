@@ -1,36 +1,23 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Link } from "gatsby";
+import MainLayout from "../main-layout";
+import LatestRecipe from "../latest-recipe";
+import PreviewRecipe from "../preview-recipe";
 
 const TopRecipesContainer = styled.div`
   min-height: 300px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #616161;
-  color: #fff;
-  transition: background-color 0.5s ease-in-out;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 20px;
-  box-sizing: border-box;
-
-  @media screen and (min-width: 768px) {
-    padding: 0;
-  }
+  padding: 72px 0;
+  border-bottom: 10px solid #ffffff;
 `;
 
-const LatestRecipe = styled(Link)`
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-`;
-
-const LatestRecipeImg = styled.img`
-  height: 200px;
+const RecipesContainer = styled.div`
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  justify-content: space-between;
+  background-color: #616161;
 `;
 
 const TopRecipes = ({ recipes = [] }) => {
@@ -38,21 +25,14 @@ const TopRecipes = ({ recipes = [] }) => {
 
   return (
     <TopRecipesContainer>
-      {latestRecipe && (
-        <LatestRecipe to={latestRecipe.node.fields.slug}>
-          <div>{latestRecipe.node.frontmatter.title}</div>
-          <div>
-            <LatestRecipeImg src={latestRecipe.node.frontmatter.thumbnail} />
-          </div>
-        </LatestRecipe>
-      )}
-      {recipes.map((recipe, index) => (
-        <div key={index}>
-          <Link to={recipe.node.fields.slug}>
-            {recipe.node.frontmatter.title}
-          </Link>
-        </div>
-      ))}
+      <MainLayout>
+        {latestRecipe && <LatestRecipe recipe={latestRecipe}></LatestRecipe>}
+        <RecipesContainer>
+          {recipes.map((recipe, index) => (
+            <PreviewRecipe key={index} recipe={recipe} />
+          ))}
+        </RecipesContainer>
+      </MainLayout>
     </TopRecipesContainer>
   );
 };
