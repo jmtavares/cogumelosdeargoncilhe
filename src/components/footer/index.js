@@ -48,20 +48,22 @@ const Footer = () => (
       </Link>
       <FollowUs>
         Siga-nos em:
-        <Link
-          to="https://www.facebook.com/Cogumelos-de-Argoncilhe-1391774824183623"
+        <a
+          href="https://www.facebook.com/Cogumelos-de-Argoncilhe-1391774824183623"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
+          title="Facebook"
         >
           <FacebookImage />
-        </Link>
-        <Link
-          to="https://www.instagram.com/cogumelosdeargoncilhe/"
+        </a>
+        <a
+          href="https://www.instagram.com/cogumelosdeargoncilhe/"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
+          title="Instagram"
         >
           <InstagramImage />
-        </Link>
+        </a>
       </FollowUs>
     </FooterContainer>
   </MainLayout>

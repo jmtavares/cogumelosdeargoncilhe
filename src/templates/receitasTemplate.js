@@ -1,21 +1,37 @@
 import React from "react";
 import { graphql } from "gatsby";
+import styled from "@emotion/styled";
+import Layout from "../components/layout/layout";
+import SEO from "../components/seo";
+import { Header, HeaderImage } from "../components/header";
+import MainLayout from "../components/main-layout";
+
+const Post = styled.div`
+  color: #616161;
+  min-height: 400px;
+`;
 
 const ReceitasTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <h2>{frontmatter.thumbnail}</h2>
-        <div
+    <Layout>
+      <SEO title="Cogumelos de Argoncilhe" keywords={[]} />
+
+      <HeaderImage image={frontmatter.thumbnail}>
+        <MainLayout>
+          <Header title={frontmatter.date} subtitle={frontmatter.title} />
+        </MainLayout>
+      </HeaderImage>
+
+      <MainLayout>
+        <Post
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
-    </div>
+      </MainLayout>
+    </Layout>
   );
 };
 
