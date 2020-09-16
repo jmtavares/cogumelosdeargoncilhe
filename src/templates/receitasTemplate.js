@@ -13,15 +13,17 @@ const Post = styled.div`
 
 const ReceitasTemplate = ({ data }) => {
   const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter, html, timeToRead } = markdownRemark;
+  const { date, title, thumbnail } = frontmatter;
+  const seoTitle = `Cogumelos de Argoncilhe - ${title}`;
+  const headerTitle = `${date} - ${timeToRead} min leitura`;
 
   return (
     <Layout>
-      <SEO title="Cogumelos de Argoncilhe" keywords={[]} />
-
-      <HeaderImage image={frontmatter.thumbnail}>
+      <SEO title={seoTitle} keywords={[]} />
+      <HeaderImage image={thumbnail}>
         <MainLayout>
-          <Header title={frontmatter.date} subtitle={frontmatter.title} />
+          <Header title={headerTitle} subtitle={title} />
         </MainLayout>
       </HeaderImage>
 
@@ -41,6 +43,12 @@ export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      timeToRead
+      wordCount {
+        paragraphs
+        sentences
+        words
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

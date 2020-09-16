@@ -1,8 +1,9 @@
 import React from "react";
+import { SVG } from "../../styles/typography";
 
-const FacebookLogo = ({ className, fill = "#616161" }) => {
+const FacebookLogo = ({ className, fill = "#616161", hover = "#000000" }) => {
   return (
-    <svg
+    <SVG
       className={className}
       version="1.1"
       id="Capa_1"
@@ -12,6 +13,7 @@ const FacebookLogo = ({ className, fill = "#616161" }) => {
       width={32}
       height={32}
       fill={fill}
+      hover={hover}
     >
       <g>
         <path
@@ -35,7 +37,7 @@ const FacebookLogo = ({ className, fill = "#616161" }) => {
       <g />
       <g />
       <g />
-    </svg>
+    </SVG>
   );
 };
 

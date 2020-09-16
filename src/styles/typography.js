@@ -62,3 +62,10 @@ export const StyledLink = styled(Link)`
   color: #ffffff;
   `}
 `;
+
+export const SVG = styled.svg`
+  transition: fill 0.2s ease-in-out;
+  :hover {
+    fill: ${(props) => props.hover};
+  }
+`;
