@@ -46,7 +46,7 @@ const OurHistory = () => (
         cogumelos e em 1 de outubro de 2016…
       </Description>
 
-      <KnowMoreButton type="secondary" to="/historia">
+      <KnowMoreButton type="primary" to="/historia">
         Saber Mais
       </KnowMoreButton>
     </div>

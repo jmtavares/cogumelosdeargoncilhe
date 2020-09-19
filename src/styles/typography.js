@@ -58,8 +58,8 @@ export const StyledLink = styled(Link)`
   ${(props) =>
     props.type === "secondary" &&
     `
-  background-color: #616161;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #616161;
   `}
 `;
 

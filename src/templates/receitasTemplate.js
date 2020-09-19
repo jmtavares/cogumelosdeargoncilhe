@@ -9,6 +9,7 @@ import MainLayout from "../components/main-layout";
 const Post = styled.div`
   color: #616161;
   min-height: 400px;
+  padding: 25px 0;
 `;
 
 const ReceitasTemplate = ({ data }) => {

@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import MainLayout from "../main-layout";
 import LatestRecipe from "../latest-recipe";
 import PreviewRecipe from "../preview-recipe";
+import { StyledLink } from "../../styles/typography";
 
 const TopRecipesContainer = styled.div`
   min-height: 300px;
@@ -20,18 +21,30 @@ const RecipesContainer = styled.div`
   background-color: #616161;
 `;
 
+const KnowMoreContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+`;
+
 const TopRecipes = ({ recipes = [] }) => {
-  const latestRecipe = recipes.pop();
+  const [latestRecipe, ...others] = recipes;
 
   return (
     <TopRecipesContainer>
       <MainLayout>
         {latestRecipe && <LatestRecipe recipe={latestRecipe} />}
         <RecipesContainer>
-          {recipes.map((recipe, index) => (
-            <PreviewRecipe key={index} recipe={recipe} />
-          ))}
+          {others &&
+            others.map((recipe, index) => (
+              <PreviewRecipe key={index} recipe={recipe} />
+            ))}
         </RecipesContainer>
+        <KnowMoreContainer>
+          <StyledLink type="secondary" to="/">
+            Ver Mais
+          </StyledLink>
+        </KnowMoreContainer>
       </MainLayout>
     </TopRecipesContainer>
   );
