@@ -4,6 +4,8 @@ import { Link } from "gatsby";
 import MenuIcon from "./menu-icon";
 import Menu from "../menu";
 import LogoText from "../logo-text";
+import Title from './title'
+import Subtitle from './subtitle'
 
 const HeadingContainer = styled.div`
   display: flex;
@@ -30,30 +32,12 @@ const Content = styled.div`
   }
 `;
 
-const Title = styled.h3`
-  margin: 0;
-  font-size: 21px;
-  max-width: 460px;
-  @media screen and (min-width: 768px) {
-    margin: 72px 0 0 0;
-  }
-`;
-
-const Subtitle = styled.h2`
-  margin: 10px 0 20px 0;
-  font-size: 24px;
-  max-width: 460px;
-  @media screen and (min-width: 768px) {
-    font-size: 40px;
-  }
-`;
-
 const StyledLink = styled(Link)`
   text-decoration: none;
   display: flex;
 `;
 
-const Header = ({ title, subtitle }) => {
+const Header = ({ title, subtitle, children }) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -66,10 +50,11 @@ const Header = ({ title, subtitle }) => {
       </HeadingContainer>
       {visible && <Menu />}
 
-      {(title || subtitle) && (
+      {(title || subtitle || children) && (
         <Content>
           {title && <Title>{title}</Title>}
           {subtitle && <Subtitle>{subtitle}</Subtitle>}
+          {children}
         </Content>
       )}
     </>

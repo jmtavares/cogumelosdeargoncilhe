@@ -9,8 +9,13 @@ const TopRecipesContainer = styled.div`
   min-height: 300px;
   width: 100%;
   background-color: #616161;
-  padding: 72px 0;
+  padding: 72px 80px;
   border-bottom: 10px solid #ffffff;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 1400px) {
+    padding: 72px 0;
+  }
 `;
 
 const RecipesContainer = styled.div`

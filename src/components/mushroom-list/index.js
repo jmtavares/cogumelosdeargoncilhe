@@ -33,12 +33,20 @@ const Item = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
 `;
 
 const ItemImage = styled.img`
   width: 200px;
   height: 200px;
   filter: drop-shadow(10px 10px 10px #000);
+  transition: transform 0.2s;
 
   @media screen and (min-width: 1024px) {
     width: 270px;
@@ -53,19 +61,30 @@ const ItemTitle = styled.p`
   font-weight: bold;
 `;
 
+const scrollInto = (id) => {
+  const element = document.getElementById(id);
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
+
 const MushroomList = () => (
   <MushroomListContainer>
     <MainLayout>
       <List>
-        <Item>
+        <Item onClick={() => scrollInto("Shitaque")}>
           <ItemImage src={shitakeImg} alt="Shitaque" />
           <ItemTitle>Shitaque</ItemTitle>
         </Item>
-        <Item>
+        <Item onClick={() => scrollInto("Pleurotus")}>
           <ItemImage src={pleurotusImg} alt="Pleurotus" />
           <ItemTitle>Pleurotus</ItemTitle>
         </Item>
-        <Item>
+        <Item onClick={() => scrollInto("Desidratados")}>
           <ItemImage src={desidratadosImg} alt="Desidratados" />
           <ItemTitle>Desidratados</ItemTitle>
         </Item>

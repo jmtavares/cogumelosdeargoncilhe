@@ -11,8 +11,8 @@ const PreviewRecipeContainer = styled(Link)`
 `;
 
 const PreviewRecipeImg = styled.img`
-  width: 230px;
-  height: 230px;
+  width: 270px;
+  height: 235px;
   object-position: 50% 50%;
   object-fit: cover;
   padding: 5px;

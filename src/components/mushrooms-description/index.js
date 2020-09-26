@@ -23,7 +23,7 @@ const MushroomContainer = styled.div`
   grid-template-columns: 100%;
 
   @media screen and (min-width: 768px) {
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 60% 40%;
   }
 `;
 
@@ -50,7 +50,7 @@ const ItemImage = styled.img`
 const MushroomsDescription = () => (
   <MushroomsDescriptionContainer>
     <MainLayout>
-      <MushroomContainer>
+      <MushroomContainer id="Shitaque">
         <Left>
           <Title>Shitaque</Title>
           <Description>
@@ -65,7 +65,7 @@ const MushroomsDescription = () => (
           <ItemImage src={shitakeImg} alt="Shitaque" />
         </Right>
       </MushroomContainer>
-      <MushroomContainer>
+      <MushroomContainer id="Pleurotus">
         <Left>
           <Title>Pleurotus</Title>
           <Description>
@@ -80,7 +80,7 @@ const MushroomsDescription = () => (
           <ItemImage src={pleurotusImg} alt="Pleurotus" />
         </Right>
       </MushroomContainer>
-      <MushroomContainer>
+      <MushroomContainer id="Desidratados">
         <Left>
           <Title>Desidratados</Title>
           <Description>
