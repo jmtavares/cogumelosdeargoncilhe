@@ -44,6 +44,7 @@ const Right = styled.div`
 
 const ItemImage = styled.img`
   width: 270px;
+  min-height: 270px;
   filter: drop-shadow(10px 10px 10px #000);
 `;
 
