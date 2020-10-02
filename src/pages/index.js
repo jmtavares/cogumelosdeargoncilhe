@@ -9,7 +9,6 @@ import OurProducts from "../components/our-products";
 import image from "../images/fundo-home.jpg";
 import { StyledLink } from "../styles/typography";
 
-
 const KnowMore = styled(StyledLink)`
   width: 120px;
   text-align: center;

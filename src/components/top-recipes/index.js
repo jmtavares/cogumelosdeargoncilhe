@@ -20,10 +20,15 @@ const TopRecipesContainer = styled.div`
 
 const RecipesContainer = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+  grid-template-columns: auto;
+  grid-gap: 30px;
   justify-content: space-between;
   background-color: #616161;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+  }
 `;
 
 const KnowMoreContainer = styled.div`

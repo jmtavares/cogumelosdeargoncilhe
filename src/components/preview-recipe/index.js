@@ -11,13 +11,17 @@ const PreviewRecipeContainer = styled(Link)`
 `;
 
 const PreviewRecipeImg = styled.img`
-  width: 270px;
-  height: 235px;
+  width: 100%;
   object-position: 50% 50%;
   object-fit: cover;
   padding: 5px;
   background-color: #ffffff;
   box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    width: 270px;
+    height: 235px;
+  }
 `;
 
 const PreviewRecipeTitle = styled.div`
