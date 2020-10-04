@@ -43,7 +43,7 @@ export const IndexQuery = graphql`
             title
             thumbnail {
               childImageSharp {
-                fixed (width: 600, quality: 75) {
+                fixed(width: 600, quality: 75) {
                   ...GatsbyImageSharpFixed_withWebp
                 }
               }
