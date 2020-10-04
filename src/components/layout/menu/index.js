@@ -1,7 +1,8 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import styled from "@emotion/styled";
 import { StyledLink } from "../../../styles/typography";
-import logo from "../../../images/logotipo.png";
 import FollowUs from "./follow-us";
 
 const MenuContainer = styled.div`
@@ -56,7 +57,7 @@ const PageLink = styled(StyledLink)`
   }
 `;
 
-const LogoImage = styled.img`
+const LogoImage = styled(Img)`
   display: none;
   width: 100%;
   filter: opacity(0.8);
@@ -68,40 +69,54 @@ const LogoImage = styled.img`
 
 const activeStyle = { color: "black" };
 
-const Menu = () => (
-  <MenuContainer>
-    <Container>
-      <Links>
-        <div>
-          <PageLink to="/" activeStyle={activeStyle}>
-            Home
-          </PageLink>
-        </div>
-        <div>
-          <PageLink to="/historia/" activeStyle={activeStyle}>
-            História
-          </PageLink>
-        </div>
-        <div>
-          <PageLink to="/produtos/" activeStyle={activeStyle}>
-            Produtos
-          </PageLink>
-        </div>
-        <div>
-          <PageLink to="/receitas/" activeStyle={activeStyle}>
-            Receitas
-          </PageLink>
-        </div>
-        <div>
-          <PageLink to="/contactos/" activeStyle={activeStyle}>
-            Contactos
-          </PageLink>
-        </div>
-      </Links>
-      <LogoImage src={logo} alt="Logótipo" />
-    </Container>
-    <FollowUs />
-  </MenuContainer>
-);
+const Menu = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "logotipo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <MenuContainer>
+      <Container>
+        <Links>
+          <div>
+            <PageLink to="/" activeStyle={activeStyle}>
+              Home
+            </PageLink>
+          </div>
+          <div>
+            <PageLink to="/historia/" activeStyle={activeStyle}>
+              História
+            </PageLink>
+          </div>
+          <div>
+            <PageLink to="/produtos/" activeStyle={activeStyle}>
+              Produtos
+            </PageLink>
+          </div>
+          <div>
+            <PageLink to="/receitas/" activeStyle={activeStyle}>
+              Receitas
+            </PageLink>
+          </div>
+          <div>
+            <PageLink to="/contactos/" activeStyle={activeStyle}>
+              Contactos
+            </PageLink>
+          </div>
+        </Links>
+        <LogoImage fluid={data.file.childImageSharp.fluid} alt="Logótipo" />
+      </Container>
+      <FollowUs />
+    </MenuContainer>
+  );
+};
 
 export default Menu;
