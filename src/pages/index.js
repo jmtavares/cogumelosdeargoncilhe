@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
 import { Header, HeaderImage } from "../components/layout/header";
 import MainLayout from "../components/layout/main-layout";
 import OurHistory from "../components/history/our-history";
 import OurProducts from "../components/products/our-products";
-import image from "../images/fundo-home.jpg";
 import { StyledLink } from "../styles/typography";
 
 const KnowMore = styled(StyledLink)`
@@ -33,11 +33,23 @@ const Novidades = styled.h2`
 `;
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "fundo-home.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
       <SEO title="Cogumelos de Argoncilhe" keywords={[]} />
 
-      <HeaderImage image={image}>
+      <HeaderImage image={data.file.childImageSharp.fluid}>
         <MainLayout size="100vh">
           <Header>
             <Novidades>Novidades</Novidades>

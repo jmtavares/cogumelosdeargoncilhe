@@ -34,19 +34,11 @@ const Item = styled.div`
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-
-  &:hover {
-    img {
-      transform: scale(1.1);
-    }
-  }
 `;
 
 const ItemImage = styled.img`
   width: 200px;
   height: 200px;
-  filter: drop-shadow(10px 10px 10px #000);
-  transition: transform 0.2s;
 
   @media screen and (min-width: 1024px) {
     width: 270px;

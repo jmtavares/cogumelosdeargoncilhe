@@ -5,7 +5,7 @@ import logo from "../../../images/logotipo.png";
 import FollowUs from "./follow-us";
 
 const MenuContainer = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -78,22 +78,22 @@ const Menu = () => (
           </PageLink>
         </div>
         <div>
-          <PageLink to="/historia" activeStyle={activeStyle}>
+          <PageLink to="/historia/" activeStyle={activeStyle}>
             História
           </PageLink>
         </div>
         <div>
-          <PageLink to="/produtos" activeStyle={activeStyle}>
+          <PageLink to="/produtos/" activeStyle={activeStyle}>
             Produtos
           </PageLink>
         </div>
         <div>
-          <PageLink to="/receitas" activeStyle={activeStyle}>
+          <PageLink to="/receitas/" activeStyle={activeStyle}>
             Receitas
           </PageLink>
         </div>
         <div>
-          <PageLink to="/contactos" activeStyle={activeStyle}>
+          <PageLink to="/contactos/" activeStyle={activeStyle}>
             Contactos
           </PageLink>
         </div>

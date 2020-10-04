@@ -8,20 +8,20 @@ import OurProducts from "../components/products/our-products";
 import TopRecipes from "../components/recipes/top-recipes";
 
 const ReceitasPage = ({ data }) => {
-  const posts = data.allMarkdownRemark;
+  const { allMarkdownRemark, file } = data;
 
   return (
     <Layout>
       <SEO title="Receitas" />
 
-      <HeaderImage image="https://images.pexels.com/photos/850/wood-forest-autumn-mushrooms.jpg">
+      <HeaderImage image={file.childImageSharp.fluid}>
         <MainLayout>
           <Header
             title="Prontos a ajudar…"
             subtitle="Á procura de novas receitas?"
           />
         </MainLayout>
-        <TopRecipes recipes={posts.edges} />
+        <TopRecipes recipes={allMarkdownRemark.edges} />
         <OurProducts />
       </HeaderImage>
     </Layout>
@@ -32,6 +32,13 @@ export default ReceitasPage;
 
 export const IndexQuery = graphql`
   query IndexQuery {
+    file(relativePath: { eq: "fundo-receitas.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
