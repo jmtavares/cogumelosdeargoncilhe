@@ -2,10 +2,10 @@ import React from "react";
 import styled from "@emotion/styled";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
-import { Header, HeaderImage } from "../components/header";
-import MainLayout from "../components/main-layout";
-import OurHistory from "../components/our-history";
-import OurProducts from "../components/our-products";
+import { Header, HeaderImage } from "../components/layout/header";
+import MainLayout from "../components/layout/main-layout";
+import OurHistory from "../components/history/our-history";
+import OurProducts from "../components/products/our-products";
 import image from "../images/fundo-home.jpg";
 import { StyledLink } from "../styles/typography";
 

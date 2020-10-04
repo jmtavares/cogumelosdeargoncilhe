@@ -23,23 +23,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [
-          { family: `Nunito Sans`, variants: [`300`, `400`, `700`] },
-        ],
+        fonts: [{ family: `Nunito Sans`, variants: [`300`, `400`, `700`] }],
         display: "swap",
       },
     },
     `gatsby-plugin-netlify`,
     `gatsby-plugin-emotion`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-netlify-cms`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        modulePath: `./src/components/cms/index.js`,
-        enableIdentityWidget: false,
-        publicPath: `admin`,
-        htmlTitle: `Cogumelos de Argoncilhe - Admin`,
+        path: `${__dirname}/static/images/uploads`,
+        name: "uploads",
       },
     },
     {
@@ -49,6 +43,28 @@ module.exports = {
         name: "blog",
       },
     },
-    `gatsby-transformer-remark`,
-  ]
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `./src/components/cms/index.js`,
+        enableIdentityWidget: false,
+        publicPath: `admin`,
+        htmlTitle: `Cogumelos de Argoncilhe - Admin`,
+      },
+    },
+  ],
 };

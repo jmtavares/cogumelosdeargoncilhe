@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
-import MainLayout from "../components/main-layout";
-import { Header, HeaderImage } from "../components/header";
-import MushroomList from "../components/mushroom-list";
-import MushroomsDescription from "../components/mushrooms-description";
+import MainLayout from "../components/layout/main-layout";
+import { Header, HeaderImage } from "../components/layout/header";
+import MushroomList from "../components/products/mushroom-list";
+import MushroomsDescription from "../components/products/mushrooms-description";
 import image from "../images/fundo-produtos.jpg";
 
 const ProdutosPage = () => (

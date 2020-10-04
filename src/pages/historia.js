@@ -2,10 +2,10 @@ import React from "react";
 import styled from "@emotion/styled";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
-import MainLayout from "../components/main-layout";
-import { Header, HeaderImage } from "../components/header";
-import Certificates from "../components/certificates";
-import OurProducts from "../components/our-products";
+import MainLayout from "../components/layout/main-layout";
+import { Header, HeaderImage } from "../components/layout/header";
+import Certificates from "../components/history/certificates";
+import OurProducts from "../components/products/our-products";
 import image from "../images/fundo-receitas.jpg";
 
 const HistoryBlock = styled.div`
@@ -25,6 +25,7 @@ const HistoryBlock = styled.div`
     padding: 40px 0;
   }
 `;
+
 const CertificatesBlock = styled.div`
   background-color: #fff;
   padding: 40px 0;

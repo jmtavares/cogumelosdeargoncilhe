@@ -2,10 +2,10 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
-import MainLayout from "../components/main-layout";
-import { Header, HeaderImage } from "../components/header";
-import OurProducts from "../components/our-products";
-import TopRecipes from "../components/top-recipes";
+import MainLayout from "../components/layout/main-layout";
+import { Header, HeaderImage } from "../components/layout/header";
+import OurProducts from "../components/products/our-products";
+import TopRecipes from "../components/recipes/top-recipes";
 
 const ReceitasPage = ({ data }) => {
   const posts = data.allMarkdownRemark;
@@ -41,7 +41,13 @@ export const IndexQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                fixed (width: 600, quality: 75) {
+                  ...GatsbyImageSharpFixed_withWebp
+                }
+              }
+            }
           }
         }
       }

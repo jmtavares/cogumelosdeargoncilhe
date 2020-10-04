@@ -3,8 +3,8 @@ import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
-import { Header, HeaderImage } from "../components/header";
-import MainLayout from "../components/main-layout";
+import { Header, HeaderImage } from "../components/layout/header";
+import MainLayout from "../components/layout/main-layout";
 
 const Post = styled.div`
   color: #616161;
@@ -22,7 +22,7 @@ const ReceitasTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={seoTitle} keywords={[]} />
-      <HeaderImage image={thumbnail}>
+      <HeaderImage image={thumbnail.childImageSharp.fluid.srcWebp}>
         <MainLayout>
           <Header title={headerTitle} subtitle={title} />
         </MainLayout>
@@ -53,7 +53,13 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        thumbnail
+        thumbnail {
+          childImageSharp {
+            fluid(maxWidth: 2000, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     }
   }

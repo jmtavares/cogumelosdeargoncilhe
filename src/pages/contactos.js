@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo";
-import MainLayout from "../components/main-layout";
-import { Header, HeaderImage } from "../components/header";
-import WhereWeAre from "../components/where-we-are";
-import ContactUs from "../components/contact-us";
+import MainLayout from "../components/layout/main-layout";
+import { Header, HeaderImage } from "../components/layout/header";
+import WhereWeAre from "../components/contacts/where-we-are";
+import ContactUs from "../components/contacts/contact-us";
 import image from "../images/fundo-contactos.jpg";
 
 const ContactosPage = () => (

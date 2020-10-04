@@ -2,7 +2,7 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { Global, css } from "@emotion/core";
 import { GlobalContainer } from "../../styles/typography";
-import Footer from "../footer";
+import Footer from "./footer";
 
 const Layout = ({ children, footer = true }) => (
   <StaticQuery
