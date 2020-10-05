@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Img from "gatsby-image";
 import MainLayout from "../../layout/main-layout";
-import shitakeImg from "../../../images/shitake.png";
-import pleurotusImg from "../../../images/pleurotus.png";
-import desidratadosImg from "../../../images/desidratados.png";
 
 const MushroomsDescriptionContainer = styled.div`
   background-color: #fff;
@@ -30,6 +28,7 @@ const MushroomContainer = styled.div`
 const Title = styled.h2`
   color: #616161;
   font-size: 40px;
+  text-transform: capitalize;
 `;
 
 const Description = styled.p`
@@ -38,64 +37,36 @@ const Description = styled.p`
 `;
 
 const Right = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   @media screen and (min-width: 768px) {
-    text-align: right;
+    justify-content: flex-end;
   }
 `;
 
-const ItemImage = styled.img`
+const ItemImage = styled(Img)`
   width: 270px;
   min-height: 270px;
   filter: drop-shadow(10px 10px 10px #000);
 `;
 
-const MushroomsDescription = () => (
+const MushroomsDescription = ({ products }) => (
   <MushroomsDescriptionContainer>
     <MainLayout>
-      <MushroomContainer id="shitaque">
-        <div>
-          <Title>Shitaque</Title>
-          <Description>
-            O shitake é um cogumelo comestível nativo do leste da Ásia. A
-            espécie é hoje em dia o segundo cogumelo comestível mais consumido
-            no mundo, incorporado desde há muito nos hábitos alimentares dos
-            povos asiáticos. Recentemente, foi introduzido para produção e
-            consumo nos paises ocidentais.
-          </Description>
-        </div>
-        <Right>
-          <ItemImage src={shitakeImg} alt="Shitaque" />
-        </Right>
-      </MushroomContainer>
-      <MushroomContainer id="pleurotus">
-        <div>
-          <Title>Pleurotus</Title>
-          <Description>
-            Pleurotus é um género de fungos da divisão Basidiomycota,
-            pertencentes à ordem Agaricales e à família Pleurotaceae. Suas
-            espécies e linhagens oferecem uma variedade de cores como
-            azul-escuro, cinza-escuro, branco, marrom, amarelo, salmão e rosa. O
-            píleo possui a forma de concha.
-          </Description>
-          </div>
-        <Right>
-          <ItemImage src={pleurotusImg} alt="Pleurotus" />
-        </Right>
-      </MushroomContainer>
-      <MushroomContainer id="desidratados">
-        <div>
-          <Title>Desidratados</Title>
-          <Description>
-            Nos cogumelos desidratados, conseguimos preservar todos os seus
-            componentes intactos até ao momento da sua elaboração.
-          </Description>
-          </div>
-        <Right>
-          <ItemImage src={desidratadosImg} alt="Desidratados" />
-        </Right>
-      </MushroomContainer>
+      {products.map((product) => {
+        return (
+          <MushroomContainer id={product.name} key={product.name}>
+            <div>
+              <Title>{product.name}</Title>
+              <Description>{product.description}</Description>
+            </div>
+            <Right>
+              <ItemImage fluid={{ ...product }} alt={product.name} />
+            </Right>
+          </MushroomContainer>
+        );
+      })}
     </MainLayout>
   </MushroomsDescriptionContainer>
 );
