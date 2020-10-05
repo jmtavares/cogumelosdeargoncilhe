@@ -54,7 +54,7 @@ const ItemImage = styled.img`
 const MushroomsDescription = () => (
   <MushroomsDescriptionContainer>
     <MainLayout>
-      <MushroomContainer id="Shitaque">
+      <MushroomContainer id="shitaque">
         <div>
           <Title>Shitaque</Title>
           <Description>
@@ -69,7 +69,7 @@ const MushroomsDescription = () => (
           <ItemImage src={shitakeImg} alt="Shitaque" />
         </Right>
       </MushroomContainer>
-      <MushroomContainer id="Pleurotus">
+      <MushroomContainer id="pleurotus">
         <div>
           <Title>Pleurotus</Title>
           <Description>
@@ -84,7 +84,7 @@ const MushroomsDescription = () => (
           <ItemImage src={pleurotusImg} alt="Pleurotus" />
         </Right>
       </MushroomContainer>
-      <MushroomContainer id="Desidratados">
+      <MushroomContainer id="desidratados">
         <div>
           <Title>Desidratados</Title>
           <Description>

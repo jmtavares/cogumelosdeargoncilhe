@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Img from "gatsby-image";
 import MainLayout from "../../layout/main-layout";
-import shitakeImg from "../../../images/shitake.png";
-import pleurotusImg from "../../../images/pleurotus.png";
-import desidratadosImg from "../../../images/desidratados.png";
 
 const MushroomListContainer = styled.div`
   background-color: #616161;
@@ -36,7 +34,7 @@ const Item = styled.div`
   cursor: pointer;
 `;
 
-const ItemImage = styled.img`
+const ItemImage = styled(Img)`
   width: 200px;
   height: 200px;
   filter: drop-shadow(10px 10px 10px #000);
@@ -52,6 +50,7 @@ const ItemTitle = styled.p`
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+  text-transform: capitalize;
 `;
 
 const scrollInto = (id) => {
@@ -65,22 +64,18 @@ const scrollInto = (id) => {
   }
 };
 
-const MushroomList = () => (
+const MushroomList = ({ products }) => (
   <MushroomListContainer>
     <MainLayout>
       <List>
-        <Item onClick={() => scrollInto("Shitaque")}>
-          <ItemImage src={shitakeImg} alt="Shitaque" />
-          <ItemTitle>Shitaque</ItemTitle>
-        </Item>
-        <Item onClick={() => scrollInto("Pleurotus")}>
-          <ItemImage src={pleurotusImg} alt="Pleurotus" />
-          <ItemTitle>Pleurotus</ItemTitle>
-        </Item>
-        <Item onClick={() => scrollInto("Desidratados")}>
-          <ItemImage src={desidratadosImg} alt="Desidratados" />
-          <ItemTitle>Desidratados</ItemTitle>
-        </Item>
+        {products.map((product) => {
+          return (
+            <Item key={product.name} onClick={() => scrollInto(product.name)}>
+              <ItemImage fluid={{ ...product }} alt={product.name} />
+              <ItemTitle>{product.name}</ItemTitle>
+            </Item>
+          );
+        })}
       </List>
     </MainLayout>
   </MushroomListContainer>
