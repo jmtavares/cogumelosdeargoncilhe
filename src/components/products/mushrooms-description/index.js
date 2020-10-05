@@ -37,9 +37,12 @@ const Description = styled.p`
   font-size: 19px;
 `;
 
-const Left = styled.div``;
 const Right = styled.div`
-  text-align: right;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
 `;
 
 const ItemImage = styled.img`
@@ -52,7 +55,7 @@ const MushroomsDescription = () => (
   <MushroomsDescriptionContainer>
     <MainLayout>
       <MushroomContainer id="Shitaque">
-        <Left>
+        <div>
           <Title>Shitaque</Title>
           <Description>
             O shitake é um cogumelo comestível nativo do leste da Ásia. A
@@ -61,13 +64,13 @@ const MushroomsDescription = () => (
             povos asiáticos. Recentemente, foi introduzido para produção e
             consumo nos paises ocidentais.
           </Description>
-        </Left>
+        </div>
         <Right>
           <ItemImage src={shitakeImg} alt="Shitaque" />
         </Right>
       </MushroomContainer>
       <MushroomContainer id="Pleurotus">
-        <Left>
+        <div>
           <Title>Pleurotus</Title>
           <Description>
             Pleurotus é um género de fungos da divisão Basidiomycota,
@@ -76,19 +79,19 @@ const MushroomsDescription = () => (
             azul-escuro, cinza-escuro, branco, marrom, amarelo, salmão e rosa. O
             píleo possui a forma de concha.
           </Description>
-        </Left>
+          </div>
         <Right>
           <ItemImage src={pleurotusImg} alt="Pleurotus" />
         </Right>
       </MushroomContainer>
       <MushroomContainer id="Desidratados">
-        <Left>
+        <div>
           <Title>Desidratados</Title>
           <Description>
             Nos cogumelos desidratados, conseguimos preservar todos os seus
             componentes intactos até ao momento da sua elaboração.
           </Description>
-        </Left>
+          </div>
         <Right>
           <ItemImage src={desidratadosImg} alt="Desidratados" />
         </Right>
