@@ -20,12 +20,12 @@ const TopRecipesContainer = styled.div`
 
 const RecipesContainer = styled.div`
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 100%;
   grid-gap: 30px;
   justify-content: space-between;
   background-color: #616161;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
   }
