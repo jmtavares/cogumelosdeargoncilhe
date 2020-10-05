@@ -39,6 +39,7 @@ const Item = styled.div`
 const ItemImage = styled.img`
   width: 200px;
   height: 200px;
+  filter: drop-shadow(10px 10px 10px #000);
 
   @media screen and (min-width: 1024px) {
     width: 270px;
