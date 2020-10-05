@@ -9,7 +9,11 @@ import MainLayout from "../components/layout/main-layout";
 const Post = styled.div`
   color: #616161;
   min-height: 400px;
-  padding: 25px 0;
+  padding: 20px;
+
+  @media screen and (min-width: 1400px) {
+    padding: 20px 0;
+  }
 `;
 
 const ReceitasTemplate = ({ data }) => {
@@ -30,7 +34,6 @@ const ReceitasTemplate = ({ data }) => {
 
       <MainLayout>
         <Post
-          className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </MainLayout>
