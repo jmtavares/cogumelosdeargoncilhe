@@ -33,9 +33,7 @@ const ReceitasTemplate = ({ data }) => {
       </HeaderImage>
 
       <MainLayout>
-        <Post
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <Post dangerouslySetInnerHTML={{ __html: html }} />
       </MainLayout>
     </Layout>
   );

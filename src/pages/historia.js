@@ -63,25 +63,25 @@ const HistoriaPage = () => {
             subtitle="Desde outubro de 2016, a produzir os melhores e mais saborosos cogumelos."
           />
         </MainLayout>
-        <HistoryBlock>
-          <MainLayout>
-            <HistoryDescription>
-              Nos tempos que se vivem há necessidade de nos reinventar e ir ao
-              encontro do que falta no mercado. Associando o gosto por cogumelos
-              de que todos partilhamos, verificamos que existia um nicho de
-              mercado por explorar. Começamos a criar as nossas infraestruturas
-              necessárias para produzir cogumelos e em 1 de outubro de 2016 e
-              foi fundada a nossa empresa Cogumelos de ARGONCILHE.
-            </HistoryDescription>
-          </MainLayout>
-        </HistoryBlock>
-        <CertificatesBlock>
-          <MainLayout>
-            <Certificates />
-          </MainLayout>
-        </CertificatesBlock>
-        <OurProducts />
       </HeaderImage>
+      <HistoryBlock>
+        <MainLayout>
+          <HistoryDescription>
+            Nos tempos que se vivem há necessidade de nos reinventar e ir ao
+            encontro do que falta no mercado. Associando o gosto por cogumelos
+            de que todos partilhamos, verificamos que existia um nicho de
+            mercado por explorar. Começamos a criar as nossas infraestruturas
+            necessárias para produzir cogumelos e em 1 de outubro de 2016 e foi
+            fundada a nossa empresa Cogumelos de ARGONCILHE.
+          </HistoryDescription>
+        </MainLayout>
+      </HistoryBlock>
+      <CertificatesBlock>
+        <MainLayout>
+          <Certificates />
+        </MainLayout>
+      </CertificatesBlock>
+      <OurProducts />
     </Layout>
   );
 };

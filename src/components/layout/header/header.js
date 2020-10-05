@@ -22,6 +22,7 @@ const Content = styled.div`
   flex-direction: column;
   padding: 40px 0;
   margin: 0 20px;
+  transform: translateZ(0);
 
   @media screen and (min-width: 768px) {
     margin: 0 80px;

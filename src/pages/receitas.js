@@ -21,9 +21,9 @@ const ReceitasPage = ({ data }) => {
             subtitle="Á procura de novas receitas?"
           />
         </MainLayout>
-        <TopRecipes recipes={allMarkdownRemark.edges} />
-        <OurProducts />
       </HeaderImage>
+      <TopRecipes recipes={allMarkdownRemark.edges} />
+      <OurProducts />
     </Layout>
   );
 };
