@@ -11,7 +11,6 @@ const HeadingContainer = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  padding-top: 16px;
   @media screen and (min-width: 768px) {
     padding-top: 60px;
   }

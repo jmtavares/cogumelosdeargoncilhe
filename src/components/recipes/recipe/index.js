@@ -34,7 +34,7 @@ const PreviewRecipeTitle = styled.div`
   margin-top: 30px;
 `;
 
-const PreviewRecipe = ({ recipe }) => {
+const Recipe = ({ recipe }) => {
   return (
     <PreviewRecipeContainer to={recipe.node.fields.slug}>
       <PreviewRecipeImg
@@ -45,4 +45,4 @@ const PreviewRecipe = ({ recipe }) => {
   );
 };
 
-export default PreviewRecipe;
+export default Recipe;

@@ -18,7 +18,7 @@ const ReceitasPage = ({ data }) => {
         <MainLayout>
           <Header
             title="Prontos a ajudar…"
-            subtitle="Á procura de novas receitas?"
+            subtitle="À procura de novas receitas?"
           />
         </MainLayout>
       </HeaderImage>

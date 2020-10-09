@@ -24,7 +24,7 @@ const LatestRecipeImg = styled(Img)`
   width: 100%;
   object-position: 50% 50%;
   object-fit: cover;
-  height: 150px;
+  height: 220px;
 
   @media screen and (min-width: 1024px) {
     height: 280px;

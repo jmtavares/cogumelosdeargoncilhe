@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import MainLayout from "../../layout/main-layout";
 import LatestRecipe from "../latest-recipe";
 import PreviewRecipe from "../preview-recipe";
-import { StyledLink } from "../../../styles/typography";
 
 const TopRecipesContainer = styled.div`
   min-height: 300px;
@@ -29,12 +28,6 @@ const RecipesContainer = styled.div`
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
   }
-`;
-
-const KnowMoreContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
 `;
 
 const TopRecipes = ({ recipes = [] }) => {
