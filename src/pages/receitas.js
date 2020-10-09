@@ -46,7 +46,7 @@ export const IndexQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM YYYY", locale: "pt")
             title
             thumbnail {
               childImageSharp {

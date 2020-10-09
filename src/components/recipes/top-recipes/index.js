@@ -50,11 +50,6 @@ const TopRecipes = ({ recipes = [] }) => {
               <PreviewRecipe key={index} recipe={recipe} />
             ))}
         </RecipesContainer>
-        <KnowMoreContainer>
-          <StyledLink type="secondary" to="/">
-            Ver Mais
-          </StyledLink>
-        </KnowMoreContainer>
       </MainLayout>
     </TopRecipesContainer>
   );
