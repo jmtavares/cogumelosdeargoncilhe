@@ -19,6 +19,21 @@ const Layout = ({ children, footer = true }) => (
       <>
         <Global
           styles={css`
+            :root {
+              --color1: #616161;
+              --color2: #000000;
+              --color3: #ffffff;
+            }
+
+            html.theme1 {
+              :root {
+                  --color1: #536147;
+                  --color2: #000000;
+                  --color3: #ffffff;
+                }
+              }
+            }
+
             body {
               margin: 0;
               padding: 0;

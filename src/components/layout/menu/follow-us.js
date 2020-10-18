@@ -17,7 +17,7 @@ const FooterContainer = styled.div`
 const FollowUs = styled.div`
   font-size: 22px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--color3);
   font-weight: bold;
   display: flex;
   align-items: center;

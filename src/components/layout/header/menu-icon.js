@@ -10,7 +10,7 @@ const PlaceholderImage = styled.div`
   ::before,
   ::after,
   div {
-    background-color: #fff;
+    background-color: var(--color3);
     border-radius: 3px;
     content: "";
     display: block;

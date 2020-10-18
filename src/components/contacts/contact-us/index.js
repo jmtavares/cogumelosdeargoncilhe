@@ -5,7 +5,7 @@ import { H1 } from "../../../styles/typography";
 import MainLayout from "../../layout/main-layout";
 
 const ContactUsContainer = styled.div`
-  background-color: #616161;
+  background-color: var(--color1);
   padding: 20px;
 
   @media screen and (min-width: 768px) {
@@ -25,14 +25,14 @@ const TitleContainer = styled.div`
 const SharedInputStyled = css`
   font-size: 13px;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid var(--color3);
   height: 50px;
   padding: 10px;
   width: 100%;
-  color: #fff;
+  color: var(--color3);
   box-sizing: border-box;
   ::placeholder {
-    color: #fff;
+    color: var(--color3);
   }
 `;
 
@@ -54,7 +54,7 @@ const Form = styled.form`
 
 const StyledButton = styled.button`
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: var(--color3);
   color: #616161;
   border: 0;
   padding: 15px 0;
@@ -88,7 +88,7 @@ const Label = styled.label`
   font-size: 21px;
   font-weight: 700;
   letter-spacing: 0.5px;
-  color: #ffffff;
+  color: var(--color3);
   margin-bottom: 7px;
 `;
 

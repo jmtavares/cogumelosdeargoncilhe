@@ -11,8 +11,8 @@ const OurProductsContainer = styled(Link)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #616161;
-  color: #fff;
+  background-color: var(--color1);
+  color: var(--color3);
   transition: background-color 0.5s ease-in-out;
   text-decoration: none;
   cursor: pointer;
@@ -20,7 +20,7 @@ const OurProductsContainer = styled(Link)`
   box-sizing: border-box;
 
   &:hover {
-    background-color: #000;
+    background-color: var(--color2);
   }
 
   @media screen and (min-width: 768px) {
@@ -41,7 +41,7 @@ const Title = styled(H1)`
 const Arrow = styled.div`
   width: 48px;
   height: 48px;
-  border: 2px solid #fff;
+  border: 2px solid var(--color3);
   border-radius: 50%;
   padding: 10px;
   box-sizing: border-box;

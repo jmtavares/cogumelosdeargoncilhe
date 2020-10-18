@@ -4,6 +4,10 @@ import styled from "@emotion/styled";
 const SVG = styled.svg`
   height: 22px;
 
+  @media screen and (min-width: 500px) {
+    height: 35px;
+  }
+
   @media screen and (min-width: 768px) {
     height: 45px;
   }

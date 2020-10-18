@@ -11,7 +11,7 @@ const MenuContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #616161;
+  background-color: var(--color1);
   z-index: 1;
 
   @media screen and (min-width: 768px) {
@@ -42,14 +42,14 @@ const Links = styled.div`
 `;
 
 const PageLink = styled(StyledLink)`
-  color: #fff;
+  color: var(--color3);
   font-size: 30px;
   text-transform: none;
   margin-bottom: 30px;
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #000;
+    color: var(--color2);
   }
 
   @media screen and (min-width: 768px) {

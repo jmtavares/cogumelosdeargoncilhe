@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import image from "../../../images/mushroom1.jpg";
 
 const CertificatesContainer = styled.div`
-  color: #616161;
+  color: var(--color2);
   text-align: left;
   display: grid;
   grid-gap: 10px;

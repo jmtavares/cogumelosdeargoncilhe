@@ -8,8 +8,8 @@ const LatestRecipeContainer = styled(Link)`
   grid-template-columns: 100%;
   justify-items: center;
   align-items: center;
-  background-color: #fff;
-  color: #616161;
+  background-color: var(--color3);
+  color: var(--color2);
   text-decoration: none;
   padding: 5px;
   margin-bottom: 30px;

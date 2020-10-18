@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import MainLayout from "../../layout/main-layout";
 
 const MushroomListContainer = styled.div`
-  background-color: #616161;
+  background-color: var(--color1);
   padding: 20px;
 
   @media screen and (min-width: 768px) {

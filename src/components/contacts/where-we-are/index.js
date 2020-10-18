@@ -5,7 +5,7 @@ import MainLayout from "../../layout/main-layout";
 import image from "../../../images/contactos.jpg";
 
 const WhereWeAreContainer = styled.div`
-  background-color: #616161;
+  background-color: var(--color1);
   padding: 20px;
 
   @media screen and (min-width: 768px) {
@@ -57,7 +57,7 @@ const Separator = styled.div`
 `;
 
 const CustomLink = styled.a`
-  color: #fff;
+  color: var(--color3);
   text-decoration: none;
   font-size: 15px;
   letter-spacing: 0.45px;

@@ -9,7 +9,7 @@ import Certificates from "../components/history/certificates";
 import OurProducts from "../components/products/our-products";
 
 const HistoryBlock = styled.div`
-  background-color: #616161;
+  background-color: var(--color1);
   padding: 20px;
   font-size: 16px;
   line-height: 24px;
@@ -27,7 +27,7 @@ const HistoryBlock = styled.div`
 `;
 
 const CertificatesBlock = styled.div`
-  background-color: #fff;
+  background-color: var(--color3);
   padding: 40px 0;
   font-size: 24px;
   text-align: center;

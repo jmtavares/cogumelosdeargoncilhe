@@ -13,7 +13,7 @@ const FooterContainer = styled.div`
   margin: 40px 0;
   flex-direction: column;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 950px) {
     flex-direction: row;
     margin: 40px 80px;
   }
@@ -26,7 +26,7 @@ const FooterContainer = styled.div`
 const FollowUs = styled.div`
   font-size: 22px;
   text-transform: uppercase;
-  color: #616161;
+  color: var(--color2);
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -54,7 +54,7 @@ const Footer = () => (
           rel="noreferrer"
           title="Facebook"
         >
-          <FacebookImage />
+          <FacebookImage fill="#000" />
         </a>
         <a
           href="https://www.instagram.com/cogumelosdeargoncilhe/"
@@ -62,7 +62,7 @@ const Footer = () => (
           rel="noreferrer"
           title="Instagram"
         >
-          <InstagramImage />
+          <InstagramImage fill="#000" />
         </a>
       </FollowUs>
     </FooterContainer>

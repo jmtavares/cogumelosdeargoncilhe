@@ -22,11 +22,11 @@ const OurHistoryContainer = styled.div`
 `;
 
 const Title = styled(H1)`
-  color: #616161;
+  color: var(--color2);
 `;
 
 const Description = styled.div`
-  color: #616161;
+  color: var(--color2);
 `;
 
 const Img = styled.img`

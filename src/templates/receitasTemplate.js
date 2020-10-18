@@ -7,7 +7,7 @@ import { Header, HeaderImage } from "../components/layout/header";
 import MainLayout from "../components/layout/main-layout";
 
 const Post = styled.div`
-  color: #616161;
+  color: var(--color2);
   min-height: 400px;
   padding: 20px;
 

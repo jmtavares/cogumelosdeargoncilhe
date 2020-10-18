@@ -13,7 +13,7 @@ const ThankYouContainer = styled.div`
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #616161;
+  background-color: var(--color1);
 `;
 
 const ThankYouCard = styled.div`
@@ -23,15 +23,15 @@ const ThankYouCard = styled.div`
   width: 75%;
   max-width: 400px;
   padding: 50px;
-  background: #ffffff;
+  background: var(--color3);
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.16);
 `;
 
 const StyledLink = styled(Link)`
   border-radius: 6px;
-  background-color: #616161;
-  color: #ffffff;
+  background-color: var(--color1);
+  color: var(--color3);
   padding: 15px;
   font-weight: bold;
   width: 100%;
@@ -48,12 +48,12 @@ const StyledLink = styled(Link)`
 
 const Title = styled(H1)`
   font-size: 30px;
-  color: #616161;
+  color: var(--color2);
 `;
 const Subtitle = styled("h2")`
   font-size: 20px;
   margin: 0;
-  color: #616161;
+  color: var(--color2);
 `;
 
 const ContactoRecebidoPage = () => (

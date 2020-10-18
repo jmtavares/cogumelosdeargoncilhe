@@ -16,7 +16,7 @@ const PreviewRecipeImg = styled(Img)`
   object-position: 50% 50%;
   object-fit: cover;
   padding: 5px;
-  background-color: #ffffff;
+  background-color: var(--color3);
   box-sizing: border-box;
   height: 220px;
 
@@ -30,7 +30,7 @@ const PreviewRecipeTitle = styled.div`
   font-size: 30px;
   letter-spacing: 0.71px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--color3);
   margin-top: 30px;
 `;
 

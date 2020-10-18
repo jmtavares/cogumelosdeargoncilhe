@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import MainLayout from "../../layout/main-layout";
 
 const MushroomsDescriptionContainer = styled.div`
-  background-color: #fff;
+  background-color: var(--color3);
   padding: 20px;
 
   @media screen and (min-width: 768px) {
@@ -26,13 +26,13 @@ const MushroomContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  color: #616161;
+  color: var(--color2);
   font-size: 40px;
   text-transform: capitalize;
 `;
 
 const Description = styled.p`
-  color: #616161;
+  color: var(--color2);
   font-size: 19px;
 `;
 

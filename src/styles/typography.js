@@ -8,7 +8,7 @@ export const H1 = styled.h1`
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.95px;
-  color: #ffffff;
+  color: var(--color3);
 `;
 
 export const H2 = styled.h2`
@@ -18,15 +18,15 @@ export const H2 = styled.h2`
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.5px;
-  color: #ffffff;
+  color: var(--color3);
 `;
 
 export const GlobalContainer = styled.div`
   width: 100vw;
   height: 100vh;
   font-family: "Nunito Sans", sans-serif;
-  background-color: #ffffff;
-  color: #ffffff;
+  background-color: var(--color3);
+  color: var(--color3);
   font-size: 20px;
   font-weight: normal;
   overflow-x: hidden;
@@ -51,15 +51,15 @@ export const StyledLink = styled(Link)`
   ${(props) =>
     props.type === "primary" &&
     `
-  background-color: #616161;
-  color: #ffffff;
+  background-color: var(--color1);
+  color: var(--color3);
   `}
 
   ${(props) =>
     props.type === "secondary" &&
     `
-  background-color: #ffffff;
-  color: #616161;
+  background-color: var(--color3);
+  color: var(--color2);
   `}
 `;
 
