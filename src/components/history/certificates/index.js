@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import image from "../../../images/mushroom1.jpg";
+import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
 
 const CertificatesContainer = styled.div`
   color: var(--color2);
@@ -36,11 +37,24 @@ const Column = styled.div`
   justify-content: center;
 `;
 
-const Image = styled.img`
-  width: 100%;
+const CertImage = styled(Img)`
+  height: 300px;
 `;
 
 const Certificates = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "mushroom1.jpg" }) {
+        childImageSharp {
+          fixed(width: 500, height: 300, quality: 100) {
+            originalName
+            ...GatsbyImageSharpFixed_withWebp_noBase64
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <CertificatesContainer>
       <Column>
@@ -52,7 +66,10 @@ const Certificates = () => {
         </Description>
       </Column>
       <Column>
-        <Image src={image} alt="Cogumelos" />
+        <CertImage
+          fluid={{ ...data.file.childImageSharp.fixed }}
+          alt="Cogumelos"
+        />
       </Column>
     </CertificatesContainer>
   );

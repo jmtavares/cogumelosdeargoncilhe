@@ -47,13 +47,11 @@ const Arrow = styled.div`
   box-sizing: border-box;
 `;
 
-const ArrowImage = styled.img``;
-
 const OurProducts = () => (
   <OurProductsContainer to="/produtos">
     <Title>Os nossos produtos</Title>
     <Arrow>
-      <ArrowImage src={imgArrow} alt="Ver os nossos productos" />
+      <img src={imgArrow} alt="Ver os nossos productos" />
     </Arrow>
   </OurProductsContainer>
 );
