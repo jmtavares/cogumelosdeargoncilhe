@@ -6,13 +6,16 @@ import SEO from "../components/seo";
 import { Header, HeaderImage } from "../components/layout/header";
 import MainLayout from "../components/layout/main-layout";
 
+const PostContainer = styled.div`
+  background-color: #3a4648;
+  color: var(--color3);
+`;
 const Post = styled.div`
-  color: var(--color2);
   min-height: 400px;
   padding: 20px;
 
   @media screen and (min-width: 1400px) {
-    padding: 20px 0;
+    padding: 40px 0;
   }
 `;
 
@@ -32,9 +35,11 @@ const ReceitasTemplate = ({ data }) => {
         </MainLayout>
       </HeaderImage>
 
-      <MainLayout>
-        <Post dangerouslySetInnerHTML={{ __html: html }} />
-      </MainLayout>
+      <PostContainer>
+        <MainLayout>
+          <Post dangerouslySetInnerHTML={{ __html: html }} />
+        </MainLayout>
+      </PostContainer>
     </Layout>
   );
 };

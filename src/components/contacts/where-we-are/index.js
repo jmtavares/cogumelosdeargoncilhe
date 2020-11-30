@@ -5,7 +5,7 @@ import MainLayout from "../../layout/main-layout";
 import image from "../../../images/contactos.jpg";
 
 const WhereWeAreContainer = styled.div`
-  background-color: var(--color1);
+  background-color: #3a4648;
   padding: 20px;
 
   @media screen and (min-width: 768px) {

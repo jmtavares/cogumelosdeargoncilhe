@@ -26,6 +26,7 @@ const MushroomContainer = styled.div`
 `;
 
 const Title = styled.h2`
+  font-family: 'DM Sans', sans-serif;
   color: var(--color2);
   font-size: 40px;
   text-transform: capitalize;

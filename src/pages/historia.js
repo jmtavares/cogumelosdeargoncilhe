@@ -9,7 +9,7 @@ import Certificates from "../components/history/certificates";
 import OurProducts from "../components/products/our-products";
 
 const HistoryBlock = styled.div`
-  background-color: var(--color1);
+  background-color: #3a4648;
   padding: 20px;
   font-size: 16px;
   line-height: 24px;
@@ -22,7 +22,7 @@ const HistoryBlock = styled.div`
   }
 
   @media screen and (min-width: 1400px) {
-    padding: 40px 0;
+    padding: 44px 0;
   }
 `;
 
@@ -37,6 +37,7 @@ const CertificatesBlock = styled.div`
 const HistoryDescription = styled.div`
   margin: 0 auto;
   max-width: 967px;
+  letter-spacing: 0.57px;
 `;
 
 const HistoriaPage = () => {

@@ -42,7 +42,7 @@ const Links = styled.div`
 `;
 
 const PageLink = styled(StyledLink)`
-  color: var(--color3);
+  color: #6c4244;
   font-size: 30px;
   text-transform: none;
   margin-bottom: 30px;

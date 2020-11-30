@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Img from "gatsby-image";
-import MainLayout from "../../layout/main-layout";
 
 const MushroomListContainer = styled.div`
-  background-color: var(--color1);
   padding: 20px;
+  transform: translateZ(0px);
 
   @media screen and (min-width: 768px) {
     padding: 80px;
@@ -46,6 +45,8 @@ const ItemImage = styled(Img)`
 `;
 
 const ItemTitle = styled.p`
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.71px;
   margin: 14px 0;
   text-align: center;
   font-size: 30px;
@@ -66,18 +67,16 @@ const scrollInto = (id) => {
 
 const MushroomList = ({ products }) => (
   <MushroomListContainer>
-    <MainLayout>
-      <List>
-        {products.map((product) => {
-          return (
-            <Item key={product.name} onClick={() => scrollInto(product.name)}>
-              <ItemImage fluid={{ ...product }} alt={product.name} />
-              <ItemTitle>{product.name}</ItemTitle>
-            </Item>
-          );
-        })}
-      </List>
-    </MainLayout>
+    <List>
+      {products.map((product) => {
+        return (
+          <Item key={product.name} onClick={() => scrollInto(product.name)}>
+            <ItemImage fluid={{ ...product }} alt={product.name} />
+            <ItemTitle>{product.name}</ItemTitle>
+          </Item>
+        );
+      })}
+    </List>
   </MushroomListContainer>
 );
 

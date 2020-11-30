@@ -7,9 +7,8 @@ import PreviewRecipe from "../preview-recipe";
 const TopRecipesContainer = styled.div`
   min-height: 300px;
   width: 100%;
-  background-color: var(--color1);
+  background-color: #3a4648;
   padding: 72px 80px;
-  border-bottom: 10px solid var(--color3);
   box-sizing: border-box;
 
   @media screen and (min-width: 1400px) {
@@ -22,7 +21,6 @@ const RecipesContainer = styled.div`
   grid-template-columns: 100%;
   grid-gap: 30px;
   justify-content: space-between;
-  background-color: var(--color1);
 
   @media screen and (min-width: 1024px) {
     grid-template-columns: auto auto auto;

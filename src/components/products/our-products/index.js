@@ -11,7 +11,7 @@ const OurProductsContainer = styled(Link)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color1);
+  background-color: #6c4244;
   color: var(--color3);
   transition: background-color 0.5s ease-in-out;
   text-decoration: none;

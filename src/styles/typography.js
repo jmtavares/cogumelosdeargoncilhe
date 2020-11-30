@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 
 export const H1 = styled.h1`
+  font-family: 'DM Sans', sans-serif;
   font-size: 40px;
   font-weight: 700;
   font-stretch: normal;
@@ -12,6 +13,7 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
+  font-family: 'DM Sans', sans-serif;
   font-size: 21px;
   font-weight: 700;
   font-stretch: normal;
@@ -20,6 +22,7 @@ export const H2 = styled.h2`
   letter-spacing: 0.5px;
   color: var(--color3);
 `;
+
 
 export const GlobalContainer = styled.div`
   width: 100vw;
@@ -51,7 +54,7 @@ export const StyledLink = styled(Link)`
   ${(props) =>
     props.type === "primary" &&
     `
-  background-color: var(--color1);
+  background-color: #3a4648;
   color: var(--color3);
   `}
 

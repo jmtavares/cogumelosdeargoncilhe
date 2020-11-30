@@ -9,7 +9,7 @@ const LatestRecipeContainer = styled(Link)`
   justify-items: center;
   align-items: center;
   background-color: var(--color3);
-  color: var(--color2);
+  color: #616161;
   text-decoration: none;
   padding: 5px;
   margin-bottom: 30px;

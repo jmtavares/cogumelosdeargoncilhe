@@ -70,14 +70,15 @@ const ProdutosPage = () => {
       <SEO title="Produtos" />
 
       <HeaderImage image={file.childImageSharp.fluid}>
-        <MainLayout>
+        <MainLayout size="100vh">
           <Header
             title="Os nossos produtos…"
             subtitle="Os melhores e mais saborosos Cogumelos de Argoncilhe."
           />
+          <MushroomList products={products} />
         </MainLayout>
       </HeaderImage>
-      <MushroomList products={products} />
+
       <MushroomsDescription products={products} />
     </Layout>
   );

@@ -21,10 +21,25 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [{ family: `Nunito Sans`, variants: [`300`, `400`, `700`] }],
-        display: "swap",
+        fonts: {
+          google: [
+            {
+              family: "Nunito Sans",
+              variants: ["300", "400", "700"],
+              fontDisplay: "swap",
+            },
+            {
+              family: "DM Sans",
+              variants: ["700"],
+              fontDisplay: "swap",
+            },
+          ],
+        },
+        useMinify: true,
+        usePreload: true,
+        usePreconnect: true,
       },
     },
     `gatsby-plugin-netlify`,

@@ -5,6 +5,7 @@ import MainLayout from "../main-layout";
 import FacebookLogo from "../../logos/facebook-logo";
 import InstagramLogo from "../../logos/instagram-logo";
 import LogoText from "../../logos/logo-text";
+import { H2 } from "../../../styles/typography";
 
 const FooterContainer = styled.div`
   display: flex;
@@ -24,10 +25,6 @@ const FooterContainer = styled.div`
 `;
 
 const FollowUs = styled.div`
-  font-size: 22px;
-  text-transform: uppercase;
-  color: var(--color2);
-  font-weight: bold;
   display: flex;
   align-items: center;
 `;
@@ -40,14 +37,20 @@ const InstagramImage = styled(InstagramLogo)`
   margin-left: 20px;
 `;
 
+const StyledH2 = styled(H2)`
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #444f51;
+`;
+
 const Footer = () => (
   <MainLayout>
     <FooterContainer>
       <Link to="/">
-        <LogoText fill="#616161" />
+        <LogoText fill="#444f51" />
       </Link>
       <FollowUs>
-        Siga-nos em:
+        <StyledH2>Siga-nos em:</StyledH2>
         <a
           href="https://www.facebook.com/Cogumelos-de-Argoncilhe-1391774824183623"
           target="_blank"
