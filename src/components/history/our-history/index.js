@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { H1, StyledLink } from "../../../styles/typography";
+import image from "../../../images/our-history.jpg";
 
 const OurHistoryContainer = styled.div`
   display: grid;
@@ -51,7 +52,7 @@ const OurHistory = () => (
       </KnowMoreButton>
     </div>
     <div>
-      <Img src="https://cdn.olhares.pt/client/files/foto/big/836/8364625.jpg" />
+      <Img src={image} />
     </div>
   </OurHistoryContainer>
 );

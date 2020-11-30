@@ -38,7 +38,7 @@ const ProdutosPage = () => {
 
       pleurotus: file(relativePath: { eq: "pleurotus.png" }) {
         childImageSharp {
-          fixed(width: 270, height: 270, quality: 100) {
+          fixed(width: 365, height: 270, quality: 100) {
             originalName
             ...GatsbyImageSharpFixed_withWebp_noBase64
           }

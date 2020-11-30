@@ -20,7 +20,7 @@ const OurProductsContainer = styled(Link)`
   box-sizing: border-box;
 
   &:hover {
-    background-color: var(--color2);
+    background-color: #3a4648;
   }
 
   @media screen and (min-width: 768px) {
