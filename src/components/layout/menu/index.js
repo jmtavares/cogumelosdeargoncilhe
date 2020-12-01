@@ -11,11 +11,17 @@ const MenuContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color1);
+  background: rgb(249, 250, 252);
+  background: linear-gradient(
+    212deg,
+    rgba(249, 250, 252, 1) 0%,
+    rgba(195, 201, 205, 1) 35%,
+    rgba(160, 170, 172, 1) 100%
+  );
   z-index: 1;
 
   @media screen and (min-width: 768px) {
-    padding: 200px 100px;
+    padding: 200px 0 200px 100px;
   }
 `;
 
@@ -46,10 +52,10 @@ const PageLink = styled(StyledLink)`
   font-size: 30px;
   text-transform: none;
   margin-bottom: 30px;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.5s ease-in-out;
 
   &:hover {
-    color: var(--color2);
+    color: #731c20;
   }
 
   @media screen and (min-width: 768px) {
@@ -67,7 +73,11 @@ const LogoImage = styled(Img)`
   }
 `;
 
-const activeStyle = { color: "black" };
+const activeStyle = { color: "#731c20" };
+
+const StyledFollowUsContainer = styled.div`
+  margin-right: 80px;
+`;
 
 const Menu = () => {
   const data = useStaticQuery(graphql`
@@ -114,7 +124,9 @@ const Menu = () => {
         </Links>
         <LogoImage fluid={data.file.childImageSharp.fluid} alt="Logótipo" />
       </Container>
-      <FollowUs />
+      <StyledFollowUsContainer>
+        <FollowUs />
+      </StyledFollowUsContainer>
     </MenuContainer>
   );
 };

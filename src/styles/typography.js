@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 
 export const H1 = styled.h1`
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 40px;
   font-weight: 700;
   font-stretch: normal;
@@ -13,7 +13,7 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 21px;
   font-weight: 700;
   font-stretch: normal;
@@ -22,7 +22,6 @@ export const H2 = styled.h2`
   letter-spacing: 0.5px;
   color: var(--color3);
 `;
-
 
 export const GlobalContainer = styled.div`
   width: 100vw;
@@ -36,6 +35,7 @@ export const GlobalContainer = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
+  transition: all 0.5s ease-in-out;
   display: inline-block;
   font-size: 12px;
   font-weight: 700;
@@ -63,11 +63,16 @@ export const StyledLink = styled(Link)`
     `
   background-color: var(--color3);
   color: var(--color2);
+
+  &:hover {
+    background-color: #3a4648;
+    color: var(--color3);
+  }
   `}
 `;
 
 export const SVG = styled.svg`
-  transition: fill 0.2s ease-in-out;
+  transition: fill 0.5s ease-in-out;
   :hover {
     fill: ${(props) => props.hover};
   }
