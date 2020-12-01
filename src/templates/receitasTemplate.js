@@ -30,7 +30,7 @@ const ReceitasTemplate = ({ data }) => {
     <Layout>
       <SEO title={seoTitle} keywords={[]} />
       <HeaderImage image={thumbnail.childImageSharp.fluid}>
-        <MainLayout>
+        <MainLayout size="50vh">
           <Header title={headerTitle} subtitle={title} />
         </MainLayout>
       </HeaderImage>

@@ -54,7 +54,7 @@ const LogoContainer = styled.div`
 const HistoriaPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "fundo-receitas.jpg" }) {
+      file(relativePath: { eq: "fundo-historia.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 100) {
             ...GatsbyImageSharpFluid

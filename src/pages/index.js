@@ -56,7 +56,7 @@ const IndexPage = () => {
             <Novidades>Novidades</Novidades>
             <Title>Cogumelos Desidratados</Title>
             <Subtitle>Desidratados ao sol, com vitamina D.</Subtitle>
-            <KnowMore type="secondary" to="/produtos#Desidratados">
+            <KnowMore type="secondary" to="/produtos#desidratados">
               Saber Mais
             </KnowMore>
           </Header>
