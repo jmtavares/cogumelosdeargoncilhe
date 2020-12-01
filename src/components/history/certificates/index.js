@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
+import { H1 } from "../../../styles/typography";
 
 const CertificatesContainer = styled.div`
   color: var(--color2);
@@ -21,9 +22,9 @@ const CertificatesContainer = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled(H1)`
   margin: 0;
-  font-size: 40px;
+  color: #000;
 `;
 
 const Description = styled.p`
@@ -41,10 +42,16 @@ const CertImage = styled(Img)`
   height: 300px;
 `;
 
+const Strong = styled.span`
+  font-weight: bold;
+  font-size: 21px;
+  letter-spacing: 0.45px;
+`
+
 const Certificates = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "mushroom1.jpg" }) {
+      file(relativePath: { eq: "shitake-description.jpg" }) {
         childImageSharp {
           fixed(width: 500, height: 300, quality: 100) {
             originalName
@@ -58,11 +65,11 @@ const Certificates = () => {
   return (
     <CertificatesContainer>
       <Column>
-        <Title>Certificados</Title>
+        <Title>Certificações</Title>
         <Description>
-          Cumprimos os requesitos da <strong>NATURALFA</strong>, para a
+          Cumprimos os requesitos da <Strong>NATURALFA</Strong>, para a
           obtenção, preparação e comercialização dos nossos produtos em{" "}
-          <strong>Modo de Produção Biológico.</strong>
+          <Strong>Modo de Produção Biológico.</Strong>
         </Description>
       </Column>
       <Column>

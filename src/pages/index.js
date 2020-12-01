@@ -27,6 +27,7 @@ const Subtitle = styled.h3`
 `;
 
 const Novidades = styled.h2`
+  font-family: "DM Sans", sans-serif;
   margin: 75px 0;
   font-size: 21px;
   text-transform: uppercase;

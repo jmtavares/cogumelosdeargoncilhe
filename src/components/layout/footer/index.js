@@ -57,7 +57,7 @@ const Footer = () => (
           rel="noreferrer"
           title="Facebook"
         >
-          <FacebookImage fill="#000" />
+          <FacebookImage fill="#444f51" />
         </a>
         <a
           href="https://www.instagram.com/cogumelosdeargoncilhe/"
@@ -65,7 +65,7 @@ const Footer = () => (
           rel="noreferrer"
           title="Instagram"
         >
-          <InstagramImage fill="#000" />
+          <InstagramImage fill="#444f51" />
         </a>
       </FollowUs>
     </FooterContainer>

@@ -7,17 +7,8 @@ import { Header, HeaderImage } from "../components/layout/header";
 import MushroomList from "../components/products/mushroom-list";
 import MushroomsDescription from "../components/products/mushrooms-description";
 
-const productDescription = {
-  shitake:
-    "O shitake é um cogumelo comestível nativo do leste da Ásia. A espécie é hoje em dia o segundo cogumelo comestível mais consumido no mundo, incorporado desde há muito nos hábitos alimentares dos povos asiáticos. Recentemente, foi introduzido para produção e consumo nos paises ocidentais.",
-  pleurotus:
-    "Pleurotus é um género de fungos da divisão Basidiomycota, pertencentes à ordem Agaricales e à família Pleurotaceae. Suas espécies e linhagens oferecem uma variedade de cores como azul-escuro, cinza-escuro, branco, marrom, amarelo, salmão e rosa. O píleo possui a forma de concha.",
-  desidratados:
-    "Nos cogumelos desidratados, conseguimos preservar todos os seus componentes intactos até ao momento da sua elaboração.",
-};
-
 const ProdutosPage = () => {
-  const { file, shitake, pleurotus, desidratados } = useStaticQuery(graphql`
+  const { file } = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "fundo-produtos.jpg" }) {
         childImageSharp {
@@ -26,44 +17,8 @@ const ProdutosPage = () => {
           }
         }
       }
-
-      shitake: file(relativePath: { eq: "shitake.png" }) {
-        childImageSharp {
-          fixed(width: 270, height: 270, quality: 100) {
-            originalName
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
-        }
-      }
-
-      pleurotus: file(relativePath: { eq: "pleurotus.png" }) {
-        childImageSharp {
-          fixed(width: 365, height: 270, quality: 100) {
-            originalName
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
-        }
-      }
-
-      desidratados: file(relativePath: { eq: "desidratados.png" }) {
-        childImageSharp {
-          fixed(width: 270, height: 270, quality: 100) {
-            originalName
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
-        }
-      }
     }
   `);
-
-  const products = [shitake, pleurotus, desidratados].map((product) => {
-    const name = product.childImageSharp.fixed.originalName.replace(".png", "");
-    return {
-      ...product.childImageSharp.fixed,
-      description: productDescription[name],
-      name,
-    };
-  });
 
   return (
     <Layout>
@@ -75,11 +30,11 @@ const ProdutosPage = () => {
             title="Os nossos produtos…"
             subtitle="Os melhores e mais saborosos Cogumelos de Argoncilhe."
           />
-          <MushroomList products={products} />
+          <MushroomList />
         </MainLayout>
       </HeaderImage>
 
-      <MushroomsDescription products={products} />
+      <MushroomsDescription />
     </Layout>
   );
 };

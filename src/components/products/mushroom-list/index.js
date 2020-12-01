@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
 
 const MushroomListContainer = styled.div`
   padding: 20px;
@@ -88,28 +89,65 @@ const scrollInto = (id) => {
   }
 };
 
-const MushroomList = ({ products }) => (
-  <MushroomListContainer>
-    <List>
-      {products.map((product) => {
-        return (
-          <Item key={product.name} onClick={() => scrollInto(product.name)}>
-            {product.name === "shitake" && (
-              <Shitake fluid={{ ...product }} alt={product.name} />
-            )}
-            {product.name === "pleurotus" && (
-              <Pleurotus fluid={{ ...product }} alt={product.name} />
-            )}
-            {product.name === "desidratados" && (
-              <Desidratados fluid={{ ...product }} alt={product.name} />
-            )}
+const MushroomList = () => {
+  const { shitake, pleurotus, desidratados } = useStaticQuery(graphql`
+    query {
+      shitake: file(relativePath: { eq: "shitake.png" }) {
+        childImageSharp {
+          fixed(width: 270, height: 270, quality: 100) {
+            originalName
+            ...GatsbyImageSharpFixed_withWebp_noBase64
+          }
+        }
+      }
 
-            <ItemTitle>{product.name}</ItemTitle>
-          </Item>
-        );
-      })}
-    </List>
-  </MushroomListContainer>
-);
+      pleurotus: file(relativePath: { eq: "pleurotus.png" }) {
+        childImageSharp {
+          fixed(width: 365, height: 270, quality: 100) {
+            originalName
+            ...GatsbyImageSharpFixed_withWebp_noBase64
+          }
+        }
+      }
+
+      desidratados: file(relativePath: { eq: "desidratados.png" }) {
+        childImageSharp {
+          fixed(width: 270, height: 270, quality: 100) {
+            originalName
+            ...GatsbyImageSharpFixed_withWebp_noBase64
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <MushroomListContainer>
+      <List>
+        <Item onClick={() => scrollInto("shitake")}>
+          <Shitake
+            fluid={{ ...shitake.childImageSharp.fixed }}
+            alt="Shitake"
+          />
+          <ItemTitle>Shitake</ItemTitle>
+        </Item>
+        <Item onClick={() => scrollInto("pleurotus")}>
+          <Pleurotus
+            fluid={{ ...pleurotus.childImageSharp.fixed }}
+            alt="Pleurotus"
+          />
+          <ItemTitle>Pleurotus</ItemTitle>
+        </Item>
+        <Item onClick={() => scrollInto("desidratados")}>
+          <Desidratados
+            fluid={{ ...desidratados.childImageSharp.fixed }}
+            alt="Desidratados"
+          />
+          <ItemTitle>Desidratados</ItemTitle>
+        </Item>
+      </List>
+    </MushroomListContainer>
+  );
+};
 
 export default MushroomList;

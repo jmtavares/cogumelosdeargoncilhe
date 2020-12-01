@@ -25,7 +25,7 @@ const ContactosPage = () => {
       <SEO title="Contactos" />
 
       <HeaderImage image={data.file.childImageSharp.fluid}>
-        <MainLayout>
+        <MainLayout minHeight={500}>
           <Header title="Prontos a ajudar…" subtitle="Contactos" />
         </MainLayout>
       </HeaderImage>

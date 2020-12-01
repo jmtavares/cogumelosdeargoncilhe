@@ -17,7 +17,7 @@ const FooterContainer = styled.div`
 const FollowUs = styled.div`
   font-size: 22px;
   text-transform: uppercase;
-  color: var(--color3);
+  color: #000;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@ const Footer = () => (
         rel="noreferrer"
         title="Facebook"
       >
-        <FacebookImage fill="#fff" />
+        <FacebookImage fill="#000" />
       </a>
       <a
         href="https://www.instagram.com/cogumelosdeargoncilhe/"
@@ -49,7 +49,7 @@ const Footer = () => (
         rel="noreferrer"
         title="Instagram"
       >
-        <InstagramImage fill="#fff" />
+        <InstagramImage fill="#000" />
       </a>
     </FollowUs>
   </FooterContainer>

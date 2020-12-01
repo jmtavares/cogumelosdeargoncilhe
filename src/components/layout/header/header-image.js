@@ -16,10 +16,7 @@ const RelativeContainer = styled.div`
 `;
 
 const HeaderImage = ({ children, image }) => {
-  const backgroundFluidImageStack = [
-    image,
-    `linear-gradient(#000, transparent, #000)`,
-  ].reverse();
+  const backgroundFluidImageStack = [image].reverse();
 
   return (
     <RelativeContainer>

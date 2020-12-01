@@ -5,6 +5,7 @@ const MainLayout = styled.div`
 
   @media screen and (min-width: 1400px) {
     margin: 0 200px;
+    ${(props) => (props.minHeight ? `min-height: ${props.minHeight}px;` : "")}
   }
 `;
 

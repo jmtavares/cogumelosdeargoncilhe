@@ -7,6 +7,7 @@ import MainLayout from "../components/layout/main-layout";
 import { Header, HeaderImage } from "../components/layout/header";
 import Certificates from "../components/history/certificates";
 import OurProducts from "../components/products/our-products";
+import LogoText from "../components/logos/logo-text";
 
 const HistoryBlock = styled.div`
   background-color: #3a4648;
@@ -38,6 +39,16 @@ const HistoryDescription = styled.div`
   margin: 0 auto;
   max-width: 967px;
   letter-spacing: 0.57px;
+  line-height: 36px;
+`;
+
+const StyledLogo = styled(LogoText)`
+  height: 30px !important;
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const HistoriaPage = () => {
@@ -73,7 +84,10 @@ const HistoriaPage = () => {
             de que todos partilhamos, verificamos que existia um nicho de
             mercado por explorar. Começamos a criar as nossas infraestruturas
             necessárias para produzir cogumelos e em 1 de outubro de 2016 e foi
-            fundada a nossa empresa Cogumelos de ARGONCILHE.
+            fundada a nossa empresa
+            <LogoContainer>
+              <StyledLogo />
+            </LogoContainer>
           </HistoryDescription>
         </MainLayout>
       </HistoryBlock>
