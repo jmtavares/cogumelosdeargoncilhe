@@ -14,6 +14,10 @@ const Post = styled.div`
   min-height: 400px;
   padding: 20px;
 
+  li {
+    list-style-type: disc;
+  }
+
   @media screen and (min-width: 1400px) {
     padding: 40px 0;
   }
@@ -21,10 +25,10 @@ const Post = styled.div`
 
 const ReceitasTemplate = ({ data }) => {
   const { markdownRemark } = data;
-  const { frontmatter, html, timeToRead } = markdownRemark;
-  const { date, title, thumbnail } = frontmatter;
+  const { frontmatter, html } = markdownRemark;
+  const { date, title, thumbnail, duration, type } = frontmatter;
   const seoTitle = `Cogumelos de Argoncilhe - ${title}`;
-  const headerTitle = `${date} - ${timeToRead} min leitura`;
+  const headerTitle = `${date} - ${type} - Duração ${duration}min`;
 
   return (
     <Layout>
@@ -59,6 +63,8 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "DD MMMM YYYY", locale: "pt")
         title
+        duration
+        type
         thumbnail {
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {

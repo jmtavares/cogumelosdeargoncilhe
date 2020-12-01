@@ -16,6 +16,8 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Titulo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Tipo", name: "type", widget: "string" }
+      - { label: "Duração (minutos)", name: "duration", widget: "number" }
       - { label: "Imagem", name: "thumbnail", widget: "image" }
       - { label: "Descrição", name: "body", widget: "markdown" }
 
