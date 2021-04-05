@@ -29,19 +29,19 @@
     "gatsby-transformer-sharp": "^2.5.19",
     "netlify-cms-app": "^2.12.28",
     "netlify-cms-locales": "^1.18.3",
-    "prettier": "^2.1.2",
+    "prettier": "^2.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.11.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-prettier": "^6.13.0",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.5"
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.1"
   },
   "keywords": [],
   "license": "MIT",
@@ -53,8 +53,5 @@
     "serve": "gatsby serve",
     "test": "npm run lint",
     "lint": "eslint 'src/' --color --ext .js"
-  },
-  "resolutions": {
-    "lodash": "4.17.20"
   }
 }

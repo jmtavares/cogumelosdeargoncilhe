@@ -13,8 +13,7 @@ const SVG = styled.svg`
   }
 `;
 
-const LogoText = ({ className, fill = "#FFFFFF" }) => {
-  return (
+const LogoText = ({ className, fill = "#FFFFFF" }) => (
     <SVG
       className={className}
       id="Layer_1"
@@ -109,6 +108,5 @@ const LogoText = ({ className, fill = "#FFFFFF" }) => {
       />
     </SVG>
   );
-};
 
 export default LogoText;

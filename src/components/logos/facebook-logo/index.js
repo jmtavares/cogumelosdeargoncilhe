@@ -1,8 +1,7 @@
 import React from "react";
 import { SVG } from "../../../styles/typography";
 
-const FacebookLogo = ({ className, fill = "#616161", hover = "#000000" }) => {
-  return (
+const FacebookLogo = ({ className, fill = "#616161", hover = "#000000" }) => (
     <SVG
       className={className}
       version="1.1"
@@ -39,6 +38,5 @@ const FacebookLogo = ({ className, fill = "#616161", hover = "#000000" }) => {
       <g />
     </SVG>
   );
-};
 
 export default FacebookLogo;

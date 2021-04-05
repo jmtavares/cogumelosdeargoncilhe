@@ -45,12 +45,10 @@ const PlaceholderImage = styled.div`
   `}
 `;
 
-const Menu = ({ onClick, closed }) => {
-  return (
+const Menu = ({ onClick, closed }) => (
     <PlaceholderImage onClick={onClick} closed={closed}>
       <div />
     </PlaceholderImage>
   );
-};
 
 export default Menu;

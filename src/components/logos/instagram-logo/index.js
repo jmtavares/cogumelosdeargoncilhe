@@ -1,8 +1,7 @@
 import React from "react";
 import { SVG } from "../../../styles/typography";
 
-const InstagramLogo = ({ className, fill = "#616161", hover = "#000000" }) => {
-  return (
+const InstagramLogo = ({ className, fill = "#616161", hover = "#000000" }) => (
     <SVG
       className={className}
       viewBox="0 0 511 511.9"
@@ -17,6 +16,5 @@ const InstagramLogo = ({ className, fill = "#616161", hover = "#000000" }) => {
       <path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0" />
     </SVG>
   );
-};
 
 export default InstagramLogo;

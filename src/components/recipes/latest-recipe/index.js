@@ -37,8 +37,7 @@ const LatestRecipeTitle = styled.div`
   font-weight: bold;
 `;
 
-const LatestRecipe = ({ recipe }) => {
-  return (
+const LatestRecipe = ({ recipe }) => (
     <LatestRecipeContainer to={recipe.node.fields.slug}>
       <LatestRecipeTitle>{recipe.node.frontmatter.title}</LatestRecipeTitle>
       <LatestRecipeImg
@@ -46,6 +45,5 @@ const LatestRecipe = ({ recipe }) => {
       />
     </LatestRecipeContainer>
   );
-};
 
 export default LatestRecipe;

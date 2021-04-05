@@ -35,8 +35,7 @@ const PreviewRecipeTitle = styled.div`
   margin-top: 20px;
 `;
 
-const PreviewRecipe = ({ recipe }) => {
-  return (
+const PreviewRecipe = ({ recipe }) => (
     <PreviewRecipeContainer to={recipe.node.fields.slug}>
       <PreviewRecipeImg
         fluid={recipe.node.frontmatter.thumbnail.childImageSharp.fixed}
@@ -44,6 +43,5 @@ const PreviewRecipe = ({ recipe }) => {
       <PreviewRecipeTitle>{recipe.node.frontmatter.title}</PreviewRecipeTitle>
     </PreviewRecipeContainer>
   );
-};
 
 export default PreviewRecipe;
