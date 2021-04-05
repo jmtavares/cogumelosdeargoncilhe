@@ -9,7 +9,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-robots-txt`,
-    {
+    /* {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Cogumelos de Argoncilhe`,
@@ -19,7 +19,7 @@ module.exports = {
         theme_color: `#ffffff`,
         display: `fullscreen`,
       },
-    },
+    }, */
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
