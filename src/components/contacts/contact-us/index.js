@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { H1 } from "../../../styles/typography";
 import MainLayout from "../../layout/main-layout";
 

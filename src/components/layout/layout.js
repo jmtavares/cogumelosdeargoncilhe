@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import { Global, css } from "@emotion/core";
+import { Global, css } from "@emotion/react";
 import { GlobalContainer } from "../../styles/typography";
 import Footer from "./footer";
 
@@ -19,6 +19,15 @@ const Layout = ({ children, footer = true }) => (
       <>
         <Global
           styles={css`
+            body {
+              margin: 0;
+              padding: 0;
+            }
+
+            li {
+              list-style: none;
+            }
+
             :root {
               --color1: #616161;
               --color2: #000000;
@@ -32,15 +41,6 @@ const Layout = ({ children, footer = true }) => (
                   --color3: #ffffff;
                 }
               }
-            }
-
-            body {
-              margin: 0;
-              padding: 0;
-            }
-
-            li {
-              list-style: none;
             }
           `}
         />
